@@ -13,7 +13,10 @@ namespace Pocket_Scout
 		{
 			InitializeComponent();
 
-			MainPage = new Pocket_Scout.MainPage();
+            MainPage = new Pocket_Scout.ChatPage();
+
+            //TO DO change this back when push back to the master
+			//MainPage = new Pocket_Scout.MainPage();
 		}
 
 		protected override void OnStart ()

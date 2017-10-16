@@ -21,9 +21,17 @@
                     VerticalOptions="Fill"
                     TextColor="Black"
                     />
-            <Button Text="Send"
-                    HorizontalOptions="End"
-                    />
+            <Image Source="ChatPageButtonImage.png"
+                   HorizontalOptions='End'
+                   Aspect="AspectFit"
+                   HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer 
+                        Tapped="OnImageTapped">
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+                
+            </Image>
         </StackLayout>
     </StackLayout>
 </ContentPage>

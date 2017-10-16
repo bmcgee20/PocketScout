@@ -16,5 +16,16 @@ namespace Pocket_Scout
 		{
 			InitializeComponent ();
 		}
-	}
+        //function that is called when send button is pressed
+        void OnImageTapped(object sender, EventArgs args)
+        {
+            var buttonSend = (Image)sender;
+
+            //Send the message
+
+            //show a display to prove that the button has been clicked
+            DisplayAlert("Title","Message","Quit");
+        }
+
+    }
 }
