@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Scout.ChatPage">
+    <StackLayout BackgroundColor="MediumSeaGreen">
+        <Label Text="Group Name" FontSize="22"
+               TextColor="Black"
+               Margin="10,10,10,10"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"               
+               />
+        <ScrollView
+            BackgroundColor="White"
+            HeightRequest="30"
+            VerticalOptions="FillAndExpand">
+            <!--Here is where the messages go-->
+        </ScrollView>
+        <StackLayout Orientation="Horizontal" Padding="15,0,15,10">
+            <Editor Text=""
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Fill"
+                    TextColor="Black"
+                    />
+            <Button Text="Send"
+                    HorizontalOptions="End"
+                    />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
