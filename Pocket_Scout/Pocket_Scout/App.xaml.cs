@@ -13,7 +13,7 @@ namespace Pocket_Scout
 		{
 			InitializeComponent();
 
-            MainPage = new Pocket_Scout.ChatPage();
+            MainPage = new NavigationPage(new Pocket_Scout.Test_Main());
 
             //TO DO change this back when push back to the master
 			//MainPage = new Pocket_Scout.MainPage();

@@ -14,7 +14,13 @@ namespace Pocket_Scout
 	{
 		public ChatPage ()
 		{
-			InitializeComponent ();
+
+            this.ToolbarItems.Add(new ToolbarItem("Group", "ChatPageGroupButtonImage.png", () =>
+            {
+                //What the button does when it is pressed
+                Navigation.PushAsync(new ChatGroupPage());
+            }));
+            InitializeComponent ();
 		}
         //function that is called when send button is pressed
         void OnImageTapped(object sender, EventArgs args)
@@ -26,6 +32,7 @@ namespace Pocket_Scout
             //show a display to prove that the button has been clicked
             DisplayAlert("Title","Message","Quit");
         }
-
+        
+        
     }
 }

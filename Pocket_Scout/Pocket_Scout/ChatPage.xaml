@@ -1,37 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pocket_Scout.ChatPage">
-    <StackLayout BackgroundColor="MediumSeaGreen">
-        <Label Text="Group Name" FontSize="22"
-               TextColor="Black"
-               Margin="10,10,10,10"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="Center"               
-               />
+             x:Class="Pocket_Scout.ChatPage"
+             Title="Group Chat"
+             >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
         <ScrollView
+            Grid.Row="0" Grid.ColumnSpan="2"
             BackgroundColor="White"
             HeightRequest="30"
             VerticalOptions="FillAndExpand">
             <!--Here is where the messages go-->
         </ScrollView>
-        <StackLayout Orientation="Horizontal" Padding="15,0,15,10">
-            <Editor Text=""
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Fill"
-                    TextColor="Black"
-                    />
-            <Image Source="ChatPageButtonImage.png"
-                   HorizontalOptions='End'
-                   Aspect="AspectFit"
-                   HeightRequest="30">
+        <Editor x:Name="Editor_Chat" 
+                Grid.Row ="1" Grid.Column="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand"
+                TextColor="Black"
+                />
+                <!--" TextChanged="ChatBeingTyped" Completed="ChatDone"-->
+            <Image x:Name="Image_Send"
+                Source="ChatPageButtonImage.png"
+                Grid.Row="1" Grid.Column="1"
+                HorizontalOptions='End'
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFit"
+                HeightRequest="30">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
-                        Tapped="OnImageTapped">
+                    Tapped="OnImageTapped">
                     </TapGestureRecognizer>
                 </Image.GestureRecognizers>
-                
+
             </Image>
-        </StackLayout>
-    </StackLayout>
+
+    </Grid>
 </ContentPage>
