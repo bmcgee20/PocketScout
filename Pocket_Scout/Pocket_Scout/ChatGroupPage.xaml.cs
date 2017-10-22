@@ -15,6 +15,11 @@ namespace Pocket_Scout
 		public ChatGroupPage ()
 		{
 			InitializeComponent ();
-		}
+            MessageLister.ItemsSource = new List<GroupMember> {
+                new GroupMember{Name="John", LastOnline="10/21/17" },
+                new GroupMember{Name="Bill", LastOnline="8:21 pm" }
+                };
+
+        }
 	}
 }
