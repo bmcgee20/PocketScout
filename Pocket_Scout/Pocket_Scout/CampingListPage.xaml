@@ -4,7 +4,32 @@
              x:Class="Pocket_Scout.CampingListPage"
              Title="Camping List">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Orientation="Vertical">
+            
+            <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="White">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Item}" FontSize="Small" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Start"/>
+                                    <Label Text="{Binding Quantity}" HorizontalOptions="End" FontSize="Small" TextColor="Black" />
+                                    <Label Text="{Binding Person}" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="Black"/>
+                                </StackLayout>
+                        </StackLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+            <Image Source="PlusPicture.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="End" HeightRequest="30" Margin="10">
+                <!--<Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAdditionClicked">
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>-->
+            </Image>
+        </StackLayout>
+        <!--<StackLayout>
             <ScrollView>
                 <Grid Padding="10" x:Name="CampingListGrid">
                     <Grid.ColumnDefinitions>
@@ -30,6 +55,6 @@
                     </TapGestureRecognizer>
                 </Image.GestureRecognizers>
             </Image>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

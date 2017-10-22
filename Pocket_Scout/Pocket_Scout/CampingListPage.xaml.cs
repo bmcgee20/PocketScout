@@ -17,28 +17,19 @@ namespace Pocket_Scout
 		public CampingListPage ()
 		{
 			InitializeComponent ();
-		}
-        //When the plus button is clicked
-        void OnAdditionClicked(object sender, EventArgs args)
-        {
-            Image plus = (Image)sender;
-            //rotate image X degrees in 1 second
-            if (i % 2 == 0)
+            this.ToolbarItems.Add(new ToolbarItem("Add", "PlusPicture.png", () =>
             {
-                plus.RotateTo(360, 1000);
-            }
-            else
-            {
-                plus.RotateTo(0, 1000);
-            }
-            
-            //Add a label for them to input their camping stuff here
-            CampingListGrid.Children.Add(new Editor {Text="Potatoes", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start, Keyboard=Keyboard.Chat, IsEnabled =false }, 0, i);
-            CampingListGrid.Children.Add(new Editor {Text="1 Bag", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start, Keyboard=Keyboard.Chat }, 1, i);
-            CampingListGrid.Children.Add(new Editor {Text="John", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start, Keyboard= Keyboard.Chat}, 2, i);
-            CampingListGrid.Children.Add(new Image { Source = "FinishedImage.png", VerticalOptions = LayoutOptions.Center, HorizontalOptions = LayoutOptions.Center, Aspect = Aspect.AspectFit, HeightRequest = 10 },3,i);
-            i++;
+                //add a new item
+            }));
+            InitializeComponent();
+            CampingListViewer.ItemsSource = new List<CampingItem> {
+                new CampingItem{Item="Potato",Quantity="1 Bag",Person="John"},
+                new CampingItem{Item="Carrots",Quantity="1 Bag",Person="Bill"},
+                new CampingItem{Item="Tent",Quantity="1",Person="George"},
+                new CampingItem{Item="Lighter Fluid",Quantity="1 Can",Person="John"},
+                new CampingItem{Item="Sleeping Bag",Quantity="1 Each",Person="All"},
+                new CampingItem{Item="Axe",Quantity="1",Person="George"},
+                };
         }
-
     }
 }
