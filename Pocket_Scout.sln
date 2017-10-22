@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Pocket_Scout", "Pocket_Scout\Pocket_Scout\Pocket_Scout.shproj", "{21819D94-B1A1-4009-9344-83DC9DA3017E}"
 EndProject
@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocket_Scout.UWP", "Pocket_
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Pocket_Scout\Pocket_Scout\Pocket_Scout.projitems*{215b248c-0b24-4f9d-ac90-bbc882cb35b2}*SharedItemsImports = 4
 		Pocket_Scout\Pocket_Scout\Pocket_Scout.projitems*{21819d94-b1a1-4009-9344-83dc9da3017e}*SharedItemsImports = 13
 		Pocket_Scout\Pocket_Scout\Pocket_Scout.projitems*{b8906ce1-81bc-4fe6-ac4e-7ee0f29c963c}*SharedItemsImports = 4
 		Pocket_Scout\Pocket_Scout\Pocket_Scout.projitems*{f5065be2-299d-497f-8267-09132854b30b}*SharedItemsImports = 4
