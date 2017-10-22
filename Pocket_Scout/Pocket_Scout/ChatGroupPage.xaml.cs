@@ -15,11 +15,24 @@ namespace Pocket_Scout
 		public ChatGroupPage ()
 		{
 			InitializeComponent ();
+            //TO DO: Get members names from data base and last online 
             MessageLister.ItemsSource = new List<GroupMember> {
-                new GroupMember{Name="John", LastOnline="10/21/17" },
-                new GroupMember{Name="Bill", LastOnline="8:21 pm" }
+                new GroupMember{Name="John Doe", LastOnline="Last Seen at 10/21/17" },
+                new GroupMember{Name="Bill Shepard", LastOnline="Last Seen at 8:21 pm" }
                 };
-
         }
-	}
+        //Hold finger on the user then select prompt to delete user from group
+        public void OnRemoveUser(object sender, EventArgs e)
+        {
+            var menuItemRemove = ((MenuItem)sender);
+            DisplayAlert("Group Changed:", "User was removed", "Proceed");
+            //TO DO: implmenent functionality
+        }
+        //if a group member is selected
+        /*
+        void OnSelection(object sender, SelectedItemChangedEventArgs e)
+        {
+        }
+        */
+    }
 }
