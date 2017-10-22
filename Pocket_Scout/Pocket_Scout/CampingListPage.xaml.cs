@@ -23,11 +23,20 @@ namespace Pocket_Scout
         {
             Image plus = (Image)sender;
             //rotate image X degrees in 1 second
-            plus.RotateTo(360, 1000);
+            if (i % 2 == 0)
+            {
+                plus.RotateTo(360, 1000);
+            }
+            else
+            {
+                plus.RotateTo(0, 1000);
+            }
+            
             //Add a label for them to input their camping stuff here
-            CampingListGrid.Children.Add(new Editor { HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start }, 0, i);
-            CampingListGrid.Children.Add(new Editor { HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start }, 1, i);
-            CampingListGrid.Children.Add(new Editor { HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start }, 2, i);
+            CampingListGrid.Children.Add(new Editor {Text="Potatoes", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start, Keyboard=Keyboard.Chat, IsEnabled =false }, 0, i);
+            CampingListGrid.Children.Add(new Editor {Text="1 Bag", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start, Keyboard=Keyboard.Chat }, 1, i);
+            CampingListGrid.Children.Add(new Editor {Text="John", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.Start, Keyboard= Keyboard.Chat}, 2, i);
+            CampingListGrid.Children.Add(new Image { Source = "FinishedImage.png", VerticalOptions = LayoutOptions.Center, HorizontalOptions = LayoutOptions.Center, Aspect = Aspect.AspectFit, HeightRequest = 10 },3,i);
             i++;
         }
 
