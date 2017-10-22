@@ -5,7 +5,7 @@
              Title="Camping List">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" BackgroundColor="White">
-            <Grid BackgroundColor="White" Padding="10,5,10,5">
+            <Grid BackgroundColor="White" Padding="10,5,10,5" VerticalOptions="Fill" x:Name="CampingListGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="3*"/>
@@ -15,7 +15,7 @@
                 <Label Text="Quantity" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black"/>
                 <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center" TextColor="Black"/>
             </Grid>
-            <BoxView HeightRequest="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand"/>
+            <BoxView HeightRequest="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" x:Name="CampingListDivider"/>
             <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -35,10 +35,10 @@
                 </ListView.ItemTemplate>
             </ListView>
             <!--This is the hidden stack layout used for creating new entries-->
-            <StackLayout Orientation="Vertical" IsVisible="False" x:Name="StackAdd">
-                <Entry Placeholder="Item" x:Name="StackAddItem"/>
-                <Entry Placeholder="Quantity" x:Name="StackAddQuantity"/>
-                <Entry Placeholder="Person" x:Name="StackAddPerson"/>
+            <StackLayout Orientation="Vertical" IsVisible="False" x:Name="StackAdd" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <Entry Placeholder="Item" x:Name="StackAddItem" Completed="StackAddTextComplete"/>
+                <Entry Placeholder="Quantity" x:Name="StackAddQuantity" Completed="StackAddTextComplete"/>
+                <Entry Placeholder="Person" x:Name="StackAddPerson" Completed="StackAddTextComplete"/>
             </StackLayout>
             <Image Source="PlusPicture.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10">
                 <Image.GestureRecognizers>
