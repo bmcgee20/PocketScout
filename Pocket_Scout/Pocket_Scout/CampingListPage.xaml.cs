@@ -31,5 +31,10 @@ namespace Pocket_Scout
                 new CampingItem{Item="Axe",Quantity="1",Person="George"},
                 };
         }
+        void OnAddItem(object sender, EventArgs args)
+        {
+            return;
+            //let the user add a new one
+        }
     }
 }
