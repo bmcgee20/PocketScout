@@ -20,7 +20,8 @@ namespace Pocket_Scout.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new Pocket_Scout.App ());
+            global::Xamarin.FormsMaps.Init(this, bundle);
+            LoadApplication (new Pocket_Scout.App ());
 		}
 	}
 }
