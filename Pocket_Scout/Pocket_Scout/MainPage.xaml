@@ -12,39 +12,12 @@
                      VerticalOptions="Center"
                      Orientation="Vertical">
 
-            <Entry x:Name="MainEntry"
-                   BackgroundColor="Gray"/>
-
-            <Button Clicked="ButtonClicked"
-                    Text="Say Hello !"
-                    BackgroundColor="Green"
-                    TextColor="White"/>
-
-            <Label x:Name="MainLabel"
+            <Label Text="This is the Main Page"
                    TextColor="Gray"
-                   FontSize="60"/>
+                   FontSize="30"/>
 
-            <Button Text="Go to Map"
+            <Button Text="Go to Maps"
                     Clicked="NavigateButtonClicked"/>
-
-            <Button Text="Get GPS Position"
-                    Clicked="GPSButtonClicked"/>
-
-            <Label Text="Latitude"
-                   TextColor="Gray"
-                   FontSize="30"/>
-
-            <Label x:Name="LatitudeLabel"
-                   FontSize="50"
-                   Text ="None"/>
-
-            <Label Text="Longitude"
-                   TextColor="Gray"
-                   FontSize="30"/>
-
-            <Label x:Name="LongitudeLabel"
-                   FontSize="50"
-                   Text="None"/>
 
         </StackLayout>
     </ScrollView>
