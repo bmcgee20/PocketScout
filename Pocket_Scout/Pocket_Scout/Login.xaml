@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Scout.Login">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Label FontSize="50" Text="Pocket Scout" Margin="0,0,0,80"></Label>
+            <Label Text="Username" />
+            <Entry></Entry>
+            <Label Text="Password" />
+            <Entry></Entry>
+            
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="10">
+                    <Button Text="Log In"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="10">
+                    <Button Text="Sign Up"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Forgot Password?" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

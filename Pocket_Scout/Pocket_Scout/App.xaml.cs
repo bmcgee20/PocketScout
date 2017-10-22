@@ -13,8 +13,8 @@ namespace Pocket_Scout
 		{
 			InitializeComponent();
 
-			MainPage = new Pocket_Scout.MainPage();
-		}
+            MainPage = new Pocket_Scout.Login();//Pocket_Scout.MainPage();
+        }
 
 		protected override void OnStart ()
 		{
