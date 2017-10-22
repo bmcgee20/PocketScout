@@ -6,20 +6,30 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-                <Grid Padding="10">
+                <Grid Padding="10" x:Name="CampingListGrid">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
                     <Label Text="Item" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center"/>
                     <Label Text="Quantity" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center"/>
                     <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center"/>
                     <BoxView HeightRequest="1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="Black" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
-                    <Image Source="PlusPicture.png" Grid.Row="2" Grid.Column="3" HeightRequest="30"/>
                 </Grid>
             </ScrollView>
+            <Image Source="PlusPicture.png" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="End" HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAdditionClicked">
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
