@@ -34,6 +34,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <!--This is the hidden stack layout used for creating new entries-->
             <StackLayout Orientation="Vertical" IsVisible="False" x:Name="StackAdd">
                 <Entry Placeholder="Item" x:Name="StackAddItem"/>
                 <Entry Placeholder="Quantity" x:Name="StackAddQuantity"/>

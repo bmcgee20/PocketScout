@@ -33,22 +33,30 @@ namespace Pocket_Scout
         void OnAddItem(object sender, EventArgs args)
         {
             Image addImage = (Image)sender;
+            //item was not being added so add one here
             if (ItemBeingAdded == false)
             {
                 //need to switch to item being added
                 ItemBeingAdded = true;
                 addImage.RelRotateTo(360, 500);
                 addImage.Source = "FinishedImage.png";
+                StackAdd.Padding = 10;
                 StackAdd.IsVisible = true;
             }
             else
             {
+                ItemBeingAdded = false;
                 //Clicked the finished button so close out the stacklayout and add it to listview
                 StackAdd.IsVisible = false;
+                StackAdd.Padding = 0;
                 addImage.RelRotateTo(-360, 500);
                 addImage.Source = "PlusPicture.png";
                 //add to listview
                 testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });
+                //reset text to blank on editors so that next time it pops up it wont have last entry
+                StackAddItem.Text = "";
+                StackAddPerson.Text = "";
+                StackAddQuantity.Text = "";
                 //add to databse here
             }
         }
