@@ -5,13 +5,13 @@
              Title="Camping List">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" BackgroundColor="White">
-            <Grid BackgroundColor="White" Padding="10">
+            <Grid BackgroundColor="White" Padding="10,5,10,5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Item" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black"/>
+                <Label Text="Item" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black" VerticalOptions="End"/>
                 <Label Text="Quantity" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black"/>
                 <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center" TextColor="Black"/>
             </Grid>
@@ -34,7 +34,12 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Image Source="PlusPicture.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit">
+            <StackLayout Orientation="Vertical" IsVisible="False" x:Name="StackAdd">
+                <Entry Placeholder="Item" x:Name="StackAddItem"/>
+                <Entry Placeholder="Quantity" x:Name="StackAddQuantity"/>
+                <Entry Placeholder="Person" x:Name="StackAddPerson"/>
+            </StackLayout>
+            <Image Source="PlusPicture.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
                     Tapped="OnAddItem">

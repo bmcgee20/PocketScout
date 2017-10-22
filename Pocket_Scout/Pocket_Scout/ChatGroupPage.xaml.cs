@@ -26,7 +26,7 @@ namespace Pocket_Scout
         {
             var menuItemRemove = ((MenuItem)sender);
             DisplayAlert("Group Changed:", "User was removed", "Proceed");
-            //TO DO: implmenent functionality
+            //TO DO: implmenent functionality of deleting user
         }
         //if a group member is selected
         /*
