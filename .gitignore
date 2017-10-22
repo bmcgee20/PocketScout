@@ -170,6 +170,7 @@ ClientBin/
 node_modules/
 .DS_Store
 *.bak
+*.ide
 
 # RIA/Silverlight projects
 Generated_Code/
