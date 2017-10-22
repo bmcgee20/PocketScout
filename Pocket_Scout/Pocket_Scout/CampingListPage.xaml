@@ -5,20 +5,31 @@
              Title="Camping List">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            
+            <Grid BackgroundColor="White" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Item" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black"/>
+                <Label Text="Quantity" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black"/>
+                <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center" TextColor="Black"/>
+            </Grid>
             <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="White">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="White">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Item}" FontSize="Small" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Start"/>
-                                    <Label Text="{Binding Quantity}" HorizontalOptions="End" FontSize="Small" TextColor="Black" />
-                                    <Label Text="{Binding Person}" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="Black"/>
-                                </StackLayout>
-                        </StackLayout>
-
-                    </ViewCell>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Item}" FontSize="Small" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Column="0"/>
+                                <Label Text="{Binding Quantity}" HorizontalOptions="Center" FontSize="Small" TextColor="Black" Grid.Column="1"/>
+                                <Label Text="{Binding Person}" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="Black" Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
             </ListView>
