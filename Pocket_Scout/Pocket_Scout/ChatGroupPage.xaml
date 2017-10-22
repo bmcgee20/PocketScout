@@ -4,7 +4,7 @@
              x:Class="Pocket_Scout.ChatGroupPage"
              Title="Group Members">
     
-    <ListView x:Name="MessageLister" HasUnevenRows="True">
+    <ListView x:Name="MessageLister" HasUnevenRows="True" BackgroundColor="White">
         <ListView.ItemTemplate>
             <!--Defines what items in listview look like-->
             <DataTemplate>
@@ -20,6 +20,7 @@
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-     </ListView>
+        </ListView>
+    
 
 </ContentPage>

@@ -4,11 +4,9 @@
              x:Class="Pocket_Scout.Test_Main"
              Title="Test Main">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button Text="Chat page" Clicked="ButtonClicked" VerticalOptions="End" HorizontalOptions="End"/>
+        <StackLayout Padding="20">
+            <Button Text="Chat page" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="ChatPageButton" x:Name="ChatPagesButton"/>
+            <Button Text="Camping List" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="CampingListButton" x:Name="CampingListsButton"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

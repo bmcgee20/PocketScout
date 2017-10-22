@@ -18,8 +18,17 @@ namespace Pocket_Scout
 		}
         void ButtonClicked(object sender, EventArgs args)
         {
+            Button btnClicked = (Button)sender;
             //push the next page onto the navigation
-            Navigation.PushAsync(new ChatPage());
+            if(btnClicked.Id == ChatPagesButton.Id)
+            {
+                Navigation.PushAsync(new ChatPage());
+            }
+            if (btnClicked.Id == CampingListsButton.Id)
+            {
+                Navigation.PushAsync(new CampingListPage());
+
+            }            
         }
     }
 }

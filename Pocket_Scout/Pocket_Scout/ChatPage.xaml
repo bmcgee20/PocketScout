@@ -29,6 +29,7 @@
                 />
                 <!--" TextChanged="ChatBeingTyped" Completed="ChatDone"-->
             <Image x:Name="Image_Send"
+                Margin="0,0,5,0"
                 Source="ChatPageButtonImage.png"
                 Grid.Row="1" Grid.Column="1"
                 HorizontalOptions='End'
