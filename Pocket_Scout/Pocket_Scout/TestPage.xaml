@@ -5,7 +5,7 @@
              x:Class="Pocket_Scout.TestPage"
              Title="MapPage">
 
-
+    <!---Map display-->
     <maps:Map WidthRequest="320" HeightRequest="200"
                 x:Name="MyMap"
                 IsShowingUser="true"

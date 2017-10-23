@@ -17,6 +17,7 @@ namespace Pocket_Scout
 		{
 			InitializeComponent ();
 
+            //adding map
             var map = new Map(
             MapSpan.FromCenterAndRadius(
                     new Position(37, -122), Distance.FromMiles(0.3)))
@@ -33,6 +34,8 @@ namespace Pocket_Scout
             Content = stack;
 
             var position = new Position(37, -122); // Latitude, Longitude
+
+            //adding pin to map
             var pin = new Pin
             {
                 Type = PinType.Place,

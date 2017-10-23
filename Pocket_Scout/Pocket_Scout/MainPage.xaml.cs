@@ -14,6 +14,7 @@ namespace Pocket_Scout
             InitializeComponent();
         }
 
+        //go back to main page
         private async void NavigateButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TestPage());
