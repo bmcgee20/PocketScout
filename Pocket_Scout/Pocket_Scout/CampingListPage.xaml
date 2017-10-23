@@ -7,9 +7,10 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="8*"/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
-            <StackLayout Orientation="Vertical" BackgroundColor="White" Grid.ColumnSpan="2">
+            <StackLayout Orientation="Vertical" BackgroundColor="White" Grid.ColumnSpan="3">
                 <Grid BackgroundColor="White" Padding="10,5,10,5" VerticalOptions="Fill" x:Name="CampingListGrid">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
@@ -46,7 +47,14 @@
                     <Entry Placeholder="Person" x:Name="StackAddPerson" Completed="StackAddTextComplete"/>
                 </StackLayout>
             </StackLayout>
-            <Image Source="PlusPicture.png" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10" Grid.Column="1">
+            <Image Source="CancelPicture.png" Opacity="1" IsVisible="False" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10" Grid.Column="1" x:Name="CancelButton">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer 
+                            Tapped="OnCancel">
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10" Grid.Column="2">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
                             Tapped="OnAddItem">

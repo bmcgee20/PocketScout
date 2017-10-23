@@ -31,7 +31,7 @@ namespace Pocket_Scout
                 };
             CampingListViewer.ItemsSource = testList;
         }
-        //false it item is not being added true otherwise
+        //false it item is not being added true otherwise, when plus butten is pressed
         Boolean ItemBeingAdded = false;
         void OnAddItem(object sender, EventArgs args)
         {
@@ -43,6 +43,7 @@ namespace Pocket_Scout
                 CampingListGrid.IsVisible = false;
                 CampingListDivider.IsVisible = false;
                 CampingListViewer.IsVisible = false;
+                CancelButton.IsVisible = true;
                 //need to switch to item being added
                 ItemBeingAdded = true;
                 addImage.RelRotateTo(360, 500);
@@ -54,9 +55,7 @@ namespace Pocket_Scout
             {
                 ItemBeingAdded = false;
                 //add to listview
-                testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });
-                //CampingListViewer.ItemsSource = testList;
-          
+                testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });          
                 //Clicked the finished button so close out the stacklayout and add it to listview
                 StackAdd.IsVisible = false;
                 StackAdd.Padding = 0;
@@ -67,12 +66,21 @@ namespace Pocket_Scout
                 StackAddPerson.Text = "";
                 StackAddQuantity.Text = "";
                 //turn back on the rest of the UI
-                //StackAddItem.Unfocus(); StackAddPerson.Unfocus();StackAddQuantity.Unfocus();
                 CampingListGrid.IsVisible = true;
                 CampingListDivider.IsVisible = true;
                 CampingListViewer.IsVisible = true;
                 //add to databse here
             }
+        }
+        //when someone chooses to cancel a list add
+        void OnCancel(object sender, EventArgs args)
+        {
+            Image cancelImage = (Image)sender;
+            cancelImage.IsVisible = false;
+            CampingListGrid.IsVisible = true;
+            CampingListDivider.IsVisible = true;
+            CampingListViewer.IsVisible = true;
+            StackAdd.IsVisible = false;
         }
         //when you press enter or done in any of the adds it should move to next text box
         void StackAddTextComplete(object sender, EventArgs args)
