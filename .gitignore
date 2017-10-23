@@ -8,7 +8,7 @@
 *.vs/
 *.vs
 /.vs
-*storage.ide
+*/storage.ide
 
 # User-specific files
 *.suo
