@@ -4,49 +4,55 @@
              x:Class="Pocket_Scout.CampingListPage"
              Title="Camping List">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="White">
-            <Grid BackgroundColor="White" Padding="10,5,10,5" VerticalOptions="Fill" x:Name="CampingListGrid">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Item" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black" VerticalOptions="End"/>
-                <Label Text="Quantity" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black"/>
-                <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center" TextColor="Black"/>
-            </Grid>
-            <BoxView HeightRequest="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" x:Name="CampingListDivider"/>
-            <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="Transparent">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Item}" FontSize="Small" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Column="0"/>
-                                <Label Text="{Binding Quantity}" HorizontalOptions="Center" FontSize="Small" TextColor="Black" Grid.Column="1"/>
-                                <Label Text="{Binding Person}" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="Black" Grid.Column="2"/>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <!--This is the hidden stack layout used for creating new entries-->
-            <StackLayout Orientation="Vertical" IsVisible="False" x:Name="StackAdd" VerticalOptions="End" HorizontalOptions="FillAndExpand">
-                <Entry Placeholder="Item" x:Name="StackAddItem" Completed="StackAddTextComplete"/>
-                <Entry Placeholder="Quantity" x:Name="StackAddQuantity" Completed="StackAddTextComplete"/>
-                <Entry Placeholder="Person" x:Name="StackAddPerson" Completed="StackAddTextComplete"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Vertical" BackgroundColor="White" Grid.ColumnSpan="2">
+                <Grid BackgroundColor="White" Padding="10,5,10,5" VerticalOptions="Fill" x:Name="CampingListGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Item" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black" VerticalOptions="End"/>
+                    <Label Text="Quantity" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center" TextColor="Black"/>
+                </Grid>
+                <BoxView HeightRequest="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" x:Name="CampingListDivider"/>
+                <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Item}" FontSize="Small" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Start" Grid.Column="0"/>
+                                    <Label Text="{Binding Quantity}" HorizontalOptions="Center" FontSize="Small" TextColor="Black" Grid.Column="1"/>
+                                    <Label Text="{Binding Person}" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="Black" Grid.Column="2"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--This is the hidden stack layout used for creating new entries-->
+                <StackLayout Orientation="Vertical" IsVisible="False" x:Name="StackAdd" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                    <Entry Placeholder="Item" x:Name="StackAddItem" Completed="StackAddTextComplete"/>
+                    <Entry Placeholder="Quantity" x:Name="StackAddQuantity" Completed="StackAddTextComplete"/>
+                    <Entry Placeholder="Person" x:Name="StackAddPerson" Completed="StackAddTextComplete"/>
+                </StackLayout>
             </StackLayout>
-            <Image Source="PlusPicture.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10">
+            <Image Source="PlusPicture.png" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10" Grid.Column="1">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
-                    Tapped="OnAddItem">
+                            Tapped="OnAddItem">
                     </TapGestureRecognizer>
                 </Image.GestureRecognizers>
             </Image>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -14,7 +14,14 @@ namespace Pocket_Scout
 	{
         //TO DO: let the user delete and edit entries in the list view
         //let a user cancel creating a new entry once they select creation
-        List<CampingItem> testList = new List<CampingItem> {
+        //Hide keyboard after adding
+        List<CampingItem> testList; 
+        public CampingListPage ()
+		{
+			InitializeComponent ();
+
+            //Just populates the list view for testing purposes
+            testList= new List<CampingItem> {
                 new CampingItem{Item="Potato",Quantity="1 Bag",Person="John"},
                 new CampingItem{Item="Carrots",Quantity="1 Bag",Person="Bill"},
                 new CampingItem{Item="Tent",Quantity="1",Person="George"},
@@ -22,11 +29,6 @@ namespace Pocket_Scout
                 new CampingItem{Item="Sleeping Bag",Quantity="1 Each",Person="All"},
                 new CampingItem{Item="Axe",Quantity="1",Person="George"},
                 };
-        public CampingListPage ()
-		{
-			InitializeComponent ();
-
-            //Just populates the list view for testing purposes
             CampingListViewer.ItemsSource = testList;
         }
         //false it item is not being added true otherwise
@@ -51,20 +53,21 @@ namespace Pocket_Scout
             else
             {
                 ItemBeingAdded = false;
-                
+                //add to listview
+                testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });
+                //CampingListViewer.ItemsSource = testList;
+          
                 //Clicked the finished button so close out the stacklayout and add it to listview
                 StackAdd.IsVisible = false;
                 StackAdd.Padding = 0;
                 addImage.RelRotateTo(-360, 500);
                 addImage.Source = "PlusPicture.png";
-                //add to listview
-                testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });
                 //reset text to blank on editors so that next time it pops up it wont have last entry
                 StackAddItem.Text = "";
                 StackAddPerson.Text = "";
                 StackAddQuantity.Text = "";
                 //turn back on the rest of the UI
-                StackAddItem.Unfocus(); StackAddPerson.Unfocus();StackAddQuantity.Unfocus();
+                //StackAddItem.Unfocus(); StackAddPerson.Unfocus();StackAddQuantity.Unfocus();
                 CampingListGrid.IsVisible = true;
                 CampingListDivider.IsVisible = true;
                 CampingListViewer.IsVisible = true;
