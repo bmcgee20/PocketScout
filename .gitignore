@@ -4,6 +4,8 @@
 
 # Visual Studio (>=2015) project-specific, machine local files
 .vs/
+*.vs/
+*.vs
 
 # User-specific files
 *.suo
