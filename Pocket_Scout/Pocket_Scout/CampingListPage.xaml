@@ -47,13 +47,6 @@
                     <Entry Placeholder="Person" x:Name="StackAddPerson" Completed="StackAddTextComplete"/>
                 </StackLayout>
             </StackLayout>
-            <Image Source="CancelPicture.png" Opacity="1" IsVisible="False" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10" Grid.Column="1" x:Name="CancelButton">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer 
-                            Tapped="OnCancel">
-                    </TapGestureRecognizer>
-                </Image.GestureRecognizers>
-            </Image>
             <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" Aspect="AspectFit" Margin="10" Grid.Column="2">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 

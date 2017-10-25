@@ -43,7 +43,6 @@ namespace Pocket_Scout
                 CampingListGrid.IsVisible = false;
                 CampingListDivider.IsVisible = false;
                 CampingListViewer.IsVisible = false;
-                CancelButton.IsVisible = true;
                 //need to switch to item being added
                 ItemBeingAdded = true;
                 addImage.RelRotateTo(360, 500);
@@ -55,7 +54,9 @@ namespace Pocket_Scout
             {
                 ItemBeingAdded = false;
                 //add to listview
-                testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });          
+                CampingListViewer.ItemsSource = null; //refreshing the item source, there is a better way to do this when we pull from databse
+                testList.Add(new CampingItem { Item = StackAddItem.Text, Quantity = StackAddQuantity.Text, Person = StackAddPerson.Text });
+                CampingListViewer.ItemsSource = testList;
                 //Clicked the finished button so close out the stacklayout and add it to listview
                 StackAdd.IsVisible = false;
                 StackAdd.Padding = 0;
@@ -71,16 +72,6 @@ namespace Pocket_Scout
                 CampingListViewer.IsVisible = true;
                 //add to databse here
             }
-        }
-        //when someone chooses to cancel a list add
-        void OnCancel(object sender, EventArgs args)
-        {
-            Image cancelImage = (Image)sender;
-            cancelImage.IsVisible = false;
-            CampingListGrid.IsVisible = true;
-            CampingListDivider.IsVisible = true;
-            CampingListViewer.IsVisible = true;
-            StackAdd.IsVisible = false;
         }
         //when you press enter or done in any of the adds it should move to next text box
         void StackAddTextComplete(object sender, EventArgs args)
