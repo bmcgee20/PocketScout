@@ -26,9 +26,9 @@ namespace Pocket_Scout
             }));
             InitializeComponent ();
             MessagesList = new List<Message> {
-                new Message{MessageText="Hi Joe how is your camp spot?", UserSent="Bill", Time="8:19 PM", NotSameUser = true, colorMessage ="White", alignment = "Start" },
-                new Message{MessageText="Pretty good, getting dark you got a campfire started yet?", UserSent="Joe", Time="8:22 PM", NotSameUser = true, colorMessage ="White", alignment = "Start" },
-                new Message{MessageText="Yeah I started one about an hour ago", UserSent="George", Time="8:25 PM", NotSameUser = true , colorMessage ="White", alignment = "Start"},
+                new Message{MessageText="Hi Joe how is your camp spot?", UserSent="Bill", Time="8:19 PM", NotSameUser = true, colorMessage ="White", alignment = LayoutOptions.Start},
+                new Message{MessageText="Pretty good, getting dark you got a campfire started yet?", UserSent="Joe", Time="8:22 PM", NotSameUser = true, colorMessage ="White", alignment = LayoutOptions.Start },
+                new Message{MessageText="Yeah I started one about an hour ago", UserSent="George", Time="8:25 PM", NotSameUser = true , colorMessage ="White", alignment = LayoutOptions.Start},
                 };
             MessageListView.ItemsSource = MessagesList;
             MessageListView.ScrollTo(MessagesList.Last(), ScrollToPosition.End, true);
@@ -54,7 +54,7 @@ namespace Pocket_Scout
 
 
             //Send the message
-            MessagesList.Add(new Message { MessageText = Editor_Chat.Text, UserSent = "Roger", Time = DateTime.Now.ToString("h:mm tt"), NotSameUser = false, colorMessage = "Green", alignment = "End" });
+            MessagesList.Add(new Message { MessageText = Editor_Chat.Text, UserSent = "Roger", Time = DateTime.Now.ToString("h:mm tt"), NotSameUser = false, colorMessage = "Green", alignment = LayoutOptions.EndAndExpand });
             //for current testing we are just adding it to the data source
             //need to reformat the message to: change text to right align, background color to green with opacity 
             MessageListView.ItemsSource = null;
