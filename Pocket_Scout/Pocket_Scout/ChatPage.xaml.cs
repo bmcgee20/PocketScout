@@ -26,11 +26,13 @@ namespace Pocket_Scout
             }));
             InitializeComponent ();
             MessagesList = new List<Message> {
-                new Message{MessageText="Hi Joe how is your camp spot?", UserSent="Bill", Time="8:19 PM", NotSameUser = true, colorMessage ="White" },
-                new Message{MessageText="Pretty good, getting dark you got a campfire started yet?", UserSent="Joe", Time="8:22 PM", NotSameUser = true, colorMessage ="White" },
-                new Message{MessageText="Yeah I started one about an hour ago", UserSent="George", Time="8:25 PM", NotSameUser = true , colorMessage ="White"},
+                new Message{MessageText="Hi Joe how is your camp spot?", UserSent="Bill", Time="8:19 PM", NotSameUser = true, colorMessage ="White", alignment = "Start" },
+                new Message{MessageText="Pretty good, getting dark you got a campfire started yet?", UserSent="Joe", Time="8:22 PM", NotSameUser = true, colorMessage ="White", alignment = "Start" },
+                new Message{MessageText="Yeah I started one about an hour ago", UserSent="George", Time="8:25 PM", NotSameUser = true , colorMessage ="White", alignment = "Start"},
                 };
             MessageListView.ItemsSource = MessagesList;
+            MessageListView.ScrollTo(MessagesList.Last(), ScrollToPosition.End, true);
+
         }
         //function that is called when send button is pressed
         void OnImageTapped(object sender, EventArgs args)
@@ -52,14 +54,16 @@ namespace Pocket_Scout
 
 
             //Send the message
-            MessagesList.Add(new Message { MessageText = Editor_Chat.Text, UserSent = "Roger", Time = DateTime.Now.ToString("h:mm tt"), NotSameUser = false, colorMessage = "Green" });
+            MessagesList.Add(new Message { MessageText = Editor_Chat.Text, UserSent = "Roger", Time = DateTime.Now.ToString("h:mm tt"), NotSameUser = false, colorMessage = "Green", alignment = "End" });
             //for current testing we are just adding it to the data source
             //need to reformat the message to: change text to right align, background color to green with opacity 
             MessageListView.ItemsSource = null;
             MessageListView.ItemsSource = MessagesList;
             //reset text and hide keyboard
+            string text = Editor_Chat.Text;
             Editor_Chat.Text = "";
             Editor_Chat.Unfocus();
+            MessageListView.ScrollTo(MessagesList.Last(),ScrollToPosition.End,true);
         }        
     }
 }
