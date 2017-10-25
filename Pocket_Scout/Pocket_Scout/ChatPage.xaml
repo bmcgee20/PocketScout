@@ -19,12 +19,12 @@
                 <!--Defines what items in listview look like-->
                 <DataTemplate>
                     <ViewCell x:Name="ViewCellData">
-                        <Frame OutlineColor="{Binding colorMessage}" CornerRadius="5" IsClippedToBounds="True" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="{Binding alignment}" >
-                            <StackLayout Margin="10" BackgroundColor="White">
-                                <Label x:Name="LabelUsername" Margin="5,5,0,0" IsVisible="{Binding NotSameUser}" Text="{Binding UserSent}"  HorizontalTextAlignment="Start" VerticalOptions="End" HorizontalOptions="Start" TextColor="Green" FontSize="Small"/>
-                                <Label x:Name="LabelMessage" Margin="5,0,0,0" IsVisible="True" Text="{Binding MessageText}" HorizontalTextAlignment="{Binding alignment}" HorizontalOptions="{Binding alignment}" VerticalOptions="Start" FontSize="Small"/>
+                        <Frame OutlineColor="{Binding colorMessage}" CornerRadius="10" IsClippedToBounds="False" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="{Binding alignment}" >
+                            <StackLayout BackgroundColor="White">
+                                <Label x:Name="LabelUsername"  IsVisible="{Binding NotSameUser}" Text="{Binding UserSent}"  HorizontalTextAlignment="Start" VerticalOptions="End" HorizontalOptions="Start" TextColor="Green" FontSize="Small"/>
+                                <Label x:Name="LabelMessage"  IsVisible="True" Text="{Binding MessageText}" HorizontalTextAlignment="{Binding alignment}" HorizontalOptions="{Binding alignment}" VerticalOptions="Start" FontSize="Small"/>
                                 <!--Above is the text message, below is the time sent -->
-                                <Label x:Name="LabelTimeSent" Margin="5,0,0,0" Text="{Binding Time}" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Start" TextColor="DimGray" FontSize="Small"/>
+                                <Label x:Name="LabelTimeSent" IsEnabled="False"  Text="{Binding Time}" HorizontalTextAlignment="End" HorizontalOptions="End" VerticalOptions="Start" TextColor="DimGray" FontSize="Small"/>
                             </StackLayout>
                         </Frame>
                     </ViewCell>
