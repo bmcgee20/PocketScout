@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Scout.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+            <Label FontSize="50" Text="Sign Up" Margin="0,0,0,30" HorizontalOptions="Center"></Label>
+
+            <Label Text="Username" Margin="40,0,0,0" />
+            <Entry Margin="40,0,40,0" x:Name="usernameEntry"/>
+            <Label Text="Email" Margin="40,0,40,0"/>
+            <Entry Margin="40,0,40,0" x:Name="emailEntry" />
+            <Label Text="Password" Margin="40,0,0,0" />
+            <Entry Margin="40,0,40,0" x:Name="passwordEntry" IsPassword="True"/>
+            <Button Text="Register" Margin="40,0,40,0" Clicked="RegisterClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

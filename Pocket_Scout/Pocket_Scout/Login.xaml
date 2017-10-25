@@ -6,19 +6,25 @@
         <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
             <Label FontSize="50" Text="Pocket Scout" Margin="0,0,0,80"></Label>
             <Label Text="Username" />
-            <Entry></Entry>
+            <Entry  x:Name="usernameEntry"></Entry>
             <Label Text="Password" />
-            <Entry></Entry>
-            
+            <Entry  x:Name="passwordEntry"></Entry>
+
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="10">
-                    <Button Text="Log In"/>
+                    <Button Text="Log In" Clicked="LoginButtonClicked"/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="10">
-                    <Button Text="Sign Up"/>
+                    <Button Text="Sign Up" Clicked="SignUpButtonClicked"/>
                 </StackLayout>
             </StackLayout>
-            <Label Text="Forgot Password?" HorizontalOptions="Center"/>
+
+            <Label Text="Forgot Password?" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ForgotPasswordClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
