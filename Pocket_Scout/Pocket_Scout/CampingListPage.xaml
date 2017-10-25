@@ -22,7 +22,7 @@
                     <Label Text="Person" Grid.Row="0" Grid.Column="2"  HorizontalOptions="Center" TextColor="Black"/>
                 </Grid>
                 <BoxView HeightRequest="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" x:Name="CampingListDivider"/>
-                <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="Transparent">
+                <ListView x:Name="CampingListViewer" HasUnevenRows="True" BackgroundColor="Transparent" ItemSelected="ListItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

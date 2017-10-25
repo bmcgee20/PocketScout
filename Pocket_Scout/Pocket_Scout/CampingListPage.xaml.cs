@@ -90,5 +90,10 @@ namespace Pocket_Scout
                 StackAddPerson.Unfocus();
             }
         }
+        void ListItemSelected(object sender, EventArgs args)
+        {
+            //show the edit or delete option for this list item
+            return;
+        }
     }
 }
