@@ -9,5 +9,8 @@ namespace Pocket_Scout
         public string MessageText { get; set; }
         public string UserSent { get; set; }
         public string Time { get; set; }
+        public bool NotSameUser { get; set; }
+        public string colorMessage { get; set; }
+        public string alignment { get; set; }
     }
 }
