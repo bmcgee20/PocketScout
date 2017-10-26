@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Scout.ChatGroupPage"
+             Title="Group Members">
+    
+    <ListView x:Name="MessageLister" HasUnevenRows="True" BackgroundColor="White">
+        <ListView.ItemTemplate>
+            <!--Defines what items in listview look like-->
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Clicked="OnRemoveUser" CommandParameter="{Binding .}" Text="Remove user from group"/>
+                    </ViewCell.ContextActions>
+                    <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="White">
+                        <Label Text="{Binding Name}" FontSize="Medium" TextColor="Black"/>
+                        <Label Text="{Binding LastOnline}" HorizontalOptions="End" FontSize="Medium" TextColor="Black"/>
+                    </StackLayout>
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        </ListView>
+    
+
+</ContentPage>

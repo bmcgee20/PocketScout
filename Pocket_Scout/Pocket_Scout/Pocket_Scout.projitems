@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)ForgotPassword.xaml.cs">
       <DependentUpon>ForgotPassword.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -29,6 +30,28 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Survival_Guide.xaml.cs">
       <DependentUpon>Survival_Guide.xaml</DependentUpon>
+=======
+    <Compile Include="$(MSBuildThisFileDirectory)CampingItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CampingListPage.xaml.cs">
+      <DependentUpon>CampingListPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ChatGroupPage.xaml.cs">
+      <DependentUpon>ChatGroupPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GroupMember.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Test_Main.xaml.cs">
+      <DependentUpon>Test_Main.xaml</DependentUpon>
+>>>>>>> origin/Comms-UI
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -43,25 +66,41 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Login.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ChatPage.xaml">
+>>>>>>> origin/Comms-UI
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Survival_Guide.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Test_Main.xaml">
+>>>>>>> origin/Comms-UI
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SignUpPage.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ChatGroupPage.xaml">
+>>>>>>> origin/Comms-UI
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ForgotPassword.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CampingListPage.xaml">
+>>>>>>> origin/Comms-UI
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

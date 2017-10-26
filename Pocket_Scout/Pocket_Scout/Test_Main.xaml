@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Scout.Test_Main"
+             Title="Test Main">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button Text="Chat page" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="ChatPageButton" x:Name="ChatPagesButton"/>
+            <Button Text="Camping List" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="CampingListButton" x:Name="CampingListsButton"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
