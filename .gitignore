@@ -4,11 +4,6 @@
 
 # Visual Studio (>=2015) project-specific, machine local files
 .vs/
-*.vs/
-*.vs/
-*.vs
-/.vs
-*/storage.ide
 
 # User-specific files
 *.suo
@@ -175,7 +170,6 @@ ClientBin/
 node_modules/
 .DS_Store
 *.bak
-*.ide
 
 # RIA/Silverlight projects
 Generated_Code/

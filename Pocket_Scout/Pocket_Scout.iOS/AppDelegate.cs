@@ -23,8 +23,7 @@ namespace Pocket_Scout.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-            global::Xamarin.FormsMaps.Init();
-            LoadApplication (new Pocket_Scout.App ());
+			LoadApplication (new Pocket_Scout.App ());
 
 			return base.FinishedLaunching (app, options);
 		}

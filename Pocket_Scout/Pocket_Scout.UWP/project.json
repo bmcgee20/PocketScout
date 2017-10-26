@@ -1,13 +1,10 @@
 ﻿{
   "dependencies": {
-    "CrossPlatformLibrary.Geolocation": "1.0.25",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Xam.Plugin.Geolocator": "4.1.1",
-    "Xamarin.Forms": "2.3.4.247",
-    "Xamarin.Forms.Maps": "2.4.0.18342"
+    "Xamarin.Forms": "2.3.4.224"
   },
   "frameworks": {
-    "uap10.0.10586": {}
+    "uap10.0": {}
   },
   "runtimes": {
     "win10-arm": {},

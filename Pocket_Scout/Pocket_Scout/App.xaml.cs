@@ -11,7 +11,6 @@ namespace Pocket_Scout
 	{
         public static bool IsUserLoggedIn { get; set; }
 
-<<<<<<< HEAD
         public App()
         {
             InitializeComponent();
@@ -23,10 +22,6 @@ namespace Pocket_Scout
                 MainPage = new Pocket_Scout.MainPage();
             }*/
         }
-=======
-            MainPage = new NavigationPage(new Pocket_Scout.MainPage());
-		}
->>>>>>> origin/geoBranch
 
 		protected override void OnStart ()
 		{
