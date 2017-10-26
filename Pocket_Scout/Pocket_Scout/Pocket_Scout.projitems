@@ -23,12 +23,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Survival_Guide.xaml.cs">
       <DependentUpon>Survival_Guide.xaml</DependentUpon>
+=======
+    <Compile Include="$(MSBuildThisFileDirectory)TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
+>>>>>>> origin/geoBranch
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -43,6 +48,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -62,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ForgotPassword.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestPage.xaml">
+>>>>>>> origin/geoBranch
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

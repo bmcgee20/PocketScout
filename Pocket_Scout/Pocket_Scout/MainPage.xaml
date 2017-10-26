@@ -4,9 +4,23 @@
              xmlns:local="clr-namespace:Pocket_Scout"
              x:Class="Pocket_Scout.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ScrollView HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+        <StackLayout BackgroundColor="White"
+                     Padding="60"
+                     VerticalOptions="Center"
+                     Orientation="Vertical">
+
+            <Label Text="This is the Main Page"
+                   TextColor="Gray"
+                   FontSize="30"/>
+
+            <Button Text="Go to Maps"
+                    Clicked="NavigateButtonClicked"/>
+
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
     
