@@ -9,12 +9,19 @@ namespace Pocket_Scout
 {
 	public partial class App : Application
 	{
-		public App ()
-		{
-			InitializeComponent();
+        public static bool IsUserLoggedIn { get; set; }
 
-			MainPage = new Pocket_Scout.MainPage();
-		}
+        public App()
+        {
+            InitializeComponent();
+            //if (!IsUserLoggedIn){
+            MainPage = new NavigationPage(new Pocket_Scout.Login());
+            /* }
+           else
+            {
+                MainPage = new Pocket_Scout.MainPage();
+            }*/
+        }
 
 		protected override void OnStart ()
 		{

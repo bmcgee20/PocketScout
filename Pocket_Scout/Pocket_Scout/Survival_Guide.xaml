@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pocket_Scout.Survival_Guide">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,40,0,30">
+            <Label Text="Survival Guide" FontSize="50" Margin="10"/>
+            <Grid VerticalOptions="FillAndExpand" ColumnSpacing="20" RowSpacing="20" Margin="45" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="First Aid" Grid.Row="0" Grid.Column="0" FontSize="20"></Button>
+                <Button Text="Animal Guide" Grid.Row="0" Grid.Column="1" FontSize="20"></Button>
+                <Button Text="Cooking Tips" Grid.Row="1" Grid.Column="0" FontSize="20"></Button>
+                <Button Text="Knots" Grid.Row="1" Grid.Column="1" FontSize="20"></Button>
+            </Grid>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
