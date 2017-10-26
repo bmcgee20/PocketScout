@@ -8,7 +8,7 @@
             <Label Text="Username" />
             <Entry  x:Name="usernameEntry"></Entry>
             <Label Text="Password" />
-            <Entry  x:Name="passwordEntry"></Entry>
+            <Entry  x:Name="passwordEntry" IsPassword="True"></Entry>
 
             <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" Padding="10">

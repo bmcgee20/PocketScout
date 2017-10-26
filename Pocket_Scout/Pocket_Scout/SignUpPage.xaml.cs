@@ -33,18 +33,17 @@ namespace Pocket_Scout
             }
             else
             {
-                 await DisplayAlert("Whoa there!", "Enter valid username/password/email:","OK");
+                await DisplayAlert("Oh no!", "Enter valid username/password:", "OK");
             }
-
+            
         }
 
 
         bool IsValid(String Username, String Password, String Email)
         {
-            return (!string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password) && 
-                !string.IsNullOrWhiteSpace(Email) && Regex.Match(Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success);
-
-        }
+            return (!string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password) && !string.IsNullOrWhiteSpace(Email) 
+            && Regex.Match(Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success);
+            }
 
     }
 }
