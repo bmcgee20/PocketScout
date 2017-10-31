@@ -33,7 +33,7 @@ namespace Pocket_Scout
             {
             //need to check if user exists and has correct pass
 
-             await Navigation.PushAsync(new MainPage());
+             await Navigation.PushAsync(new Test_Main());
             }
             else
             {

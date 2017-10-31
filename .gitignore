@@ -201,3 +201,5 @@ Pocket_Scout/Pocket_Scout.Android/Pocket_Scout.Android.csproj
 Pocket_Scout/Pocket_Scout.iOS/Pocket_Scout.iOS.csproj
 *.csproj
 *.projitems
+.vs/Pocket_Scout/v15/.suo
+.vs/Pocket_Scout/v15/sqlite3/storage.ide
