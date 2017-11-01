@@ -14,7 +14,7 @@ namespace Pocket_Scout
 	{
         //this is just for current testing NOT FOR FINAL RELEASE
         //just so that the messages will change colors based on if it is their message
-        String currentUser = "Roger";
+        //String currentUser = "Roger";
         List<Message> MessagesList;
 		public ChatPage ()
 		{
