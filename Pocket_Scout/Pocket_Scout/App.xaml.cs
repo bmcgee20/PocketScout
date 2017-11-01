@@ -19,7 +19,7 @@ namespace Pocket_Scout
             /* }
            else
             {
-                MainPage = new Pocket_Scout.MainPage();
+                MainPage = new Pocket_Scout.RootPage();
             }*/
         }
 
