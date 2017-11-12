@@ -14,13 +14,17 @@ namespace Pocket_Scout
         public App()
         {
             InitializeComponent();
-            //if (!IsUserLoggedIn){
-            MainPage = new NavigationPage(new Pocket_Scout.Login());
-            /* }
-           else
+            /*
+            if (!IsUserLoggedIn)
+            {
+                MainPage = new NavigationPage(new Pocket_Scout.Login());
+            }
+            else
             {
                 MainPage = new Pocket_Scout.RootPage();
-            }*/
+            }
+            */
+            MainPage = new Pocket_Scout.RootPage();
         }
 
 		protected override void OnStart ()

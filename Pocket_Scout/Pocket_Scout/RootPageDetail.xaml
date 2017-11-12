@@ -7,7 +7,6 @@
 
     <maps:Map WidthRequest="320" HeightRequest="200"
                 x:Name="MyMap"
-                IsShowingUser="true"
-                MapType="Hybrid"/>
+                IsShowingUser="true"/>
 
 </ContentPage>
