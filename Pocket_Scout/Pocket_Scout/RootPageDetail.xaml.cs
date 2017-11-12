@@ -51,12 +51,11 @@ namespace Pocket_Scout
             stack.Children.Add(segments);
             Content = stack;
 
-            // postion and pin
-            var position = new Position(33.584262, -101.878388); // Latitude, Longitude
+            // pin
             var pin = new Pin
             {
                 Type = PinType.Place,
-                Position = position,
+                Position = new Position(33.584262, -101.878388),
                 Label = "Texas Tech University",
                 Address = "2500 Broadway, Lubbock, TX 79409"
             };
