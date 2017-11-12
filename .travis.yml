@@ -1,4 +1,2 @@
 language: csharp
-csharp: 
-- "stable"
 solution: Pocket_Scout.sln
