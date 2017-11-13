@@ -18,9 +18,13 @@ namespace Pocket_Scout
         };
         public GroupManager ()
 		{
+            
             InitializeComponent();
-		}
+            AddMemberView.IsVisible = false;
+            CurrentGroupView.IsVisible = false;
 
+        }
+        //TO DO: add a click on list items to invite the results that you obtain
         private void MemberSearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
             var keyword = MemberSearchBar.Text;
