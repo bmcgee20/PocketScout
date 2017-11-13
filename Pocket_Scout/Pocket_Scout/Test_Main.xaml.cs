@@ -29,6 +29,10 @@ namespace Pocket_Scout
                 Navigation.PushAsync(new CampingListPage());
 
             }            
+            if(btnClicked.Id == GroupManagersButton.Id)
+            {
+                Navigation.PushAsync(new GroupManager());
+            }
         }
     }
 }
