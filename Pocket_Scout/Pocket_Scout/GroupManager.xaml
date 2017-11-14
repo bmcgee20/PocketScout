@@ -21,11 +21,12 @@
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
+        <BoxView Color="Black" HeightRequest="1"/>
         <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/>
     </StackLayout>
     <StackLayout x:Name="InviteGroupView">
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Current Invites" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="End"/>
+        <StackLayout Orientation="Horizontal"> 
+            <Label Text="Current Invites" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="EndAndExpand"/>
             <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
@@ -34,7 +35,19 @@
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
-        <ListView x:Name="InvitesList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/> 
-        
+        <BoxView Color="Black" HeightRequest="1"/>
+        <ListView x:Name="InvitesList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black" ItemTapped="InvitesList_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Username}" FontSize="Medium"/>
+                            <Button Text="Accept" IsVisible="{Binding IsVisible}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </StackLayout>
 </ContentPage>

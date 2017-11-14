@@ -16,6 +16,13 @@ namespace Pocket_Scout
         {
             "John", "Jeff", "Jerry", "Jeffry","Jill","George","Johnny","Bill",
         };
+        List<Invites> invitelist = new List<Invites>
+            {
+                new Invites{Username = "Bob Dole", IsVisible = false},
+                new Invites{Username = "Sam", IsVisible = false},
+                new Invites{Username = "Bill", IsVisible = false},
+            };
+        Invites lastTappedInvite = null;
         public GroupManager()
         {
 
@@ -23,7 +30,7 @@ namespace Pocket_Scout
             AddMemberView.IsVisible = false;
             CurrentGroupView.IsVisible = false;
             GroupMemberList.ItemsSource = groups;
-            InvitesList.ItemsSource = groups;
+            InvitesList.ItemsSource = invitelist;
 
         }
         //TO DO: add a click on list items to invite the results that you obtain
@@ -32,12 +39,37 @@ namespace Pocket_Scout
             var keyword = MemberSearchBar.Text;
             //will return all the near searchs in list
             var searchresults = from x in groups where x.ToLower().Contains(keyword.ToLower()) select x;
-
             SearchResultList.ItemsSource = searchresults;
+
+
         }
         void MakeNewGroup(object sender, EventArgs args)
         {
 
+        }
+
+        private void InvitesList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var invite = e.Item as Invites;
+            if(invite.IsVisible == false)
+            {
+                invitelist[invitelist.IndexOf(invite)].IsVisible = true;
+            }
+            else
+            {
+                invitelist[invitelist.IndexOf(invite)].IsVisible = false;
+            }
+            //just close any other open invite
+            if (lastTappedInvite != null)
+            {
+                if (lastTappedInvite.IsVisible == true)
+                {
+                    invitelist[invitelist.IndexOf(lastTappedInvite)].IsVisible = false;
+                }
+            }
+            lastTappedInvite = invite;
+            InvitesList.ItemsSource = null;
+            InvitesList.ItemsSource = invitelist;
         }
     }
 }
