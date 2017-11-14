@@ -43,11 +43,16 @@ namespace Pocket_Scout
 
 
         }
+        //makes a new group
+        //button location is on the invite list if you click the plus it will make a new group
         void MakeNewGroup(object sender, EventArgs args)
         {
-
+            //create the new group in the database here
+            InviteGroupView.IsVisible = false;
+            CurrentGroupView.IsVisible = true;
         }
 
+        //if you press an invite it will show the buttons under it (invite list view)
         private void InvitesList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var invite = e.Item as Invites;
@@ -73,13 +78,14 @@ namespace Pocket_Scout
             InvitesList.ItemsSource = invitelist;
         }
 
+        //if you press the accept button under invite list view
         private void Btn_InviteAccept_Clicked(object sender, EventArgs e)
         {
             //join this user to said group
 
             //TO DO: do this once begin working on server side part
         }
-
+        //if you press the decline button under invite listview
         private void Btn_InviteDecline_Clicked(object sender, EventArgs e)
         {
             //just remove the invite from the list
@@ -90,6 +96,13 @@ namespace Pocket_Scout
             InvitesList.ItemsSource = null;
             InvitesList.ItemsSource = invitelist;
             lastTappedInvite = null;
+        }
+
+        //if on current group view and click plus open the add member view
+        private void AddMember(object sender, EventArgs e)
+        {
+            CurrentGroupView.IsVisible = false;
+            AddMemberView.IsVisible = true;
         }
     }
 }

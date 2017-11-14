@@ -3,57 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pocket_Scout.GroupManager"
              Title="Group Manager">
-    <StackLayout Orientation="Vertical" x:Name="AddMemberView">
-        <SearchBar x:Name="MemberSearchBar" HeightRequest="42"
-                   SearchButtonPressed="MemberSearchBar_SearchButtonPressed"/>
+    <ContentPage.Content>
+        <!--Need to put a stacklayout over them all in order to set each visible or not-->
+        <StackLayout Orientation="Vertical">
+            <!--Adding members to group view-->
+            <StackLayout Orientation="Vertical" x:Name="AddMemberView">
+                <SearchBar x:Name="MemberSearchBar" HeightRequest="42"
+                           SearchButtonPressed="MemberSearchBar_SearchButtonPressed"/>
 
-        <ListView x:Name="SearchResultList"/>
-    </StackLayout>
+                <ListView x:Name="SearchResultList"/>
+            </StackLayout>
+            <!--Current Group View-->
+            <StackLayout x:Name="CurrentGroupView" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Current Group" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="EndAndExpand"/>
+                    <Label Text="Add Member" FontSize="Small" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="EndAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                    Tapped="AddMember">
+                            </TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <BoxView Color="Black" HeightRequest="1"/>
+                <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/>
+            </StackLayout>
+            <!--Invite view-->
+            <StackLayout x:Name="InviteGroupView">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Current Invites" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="EndAndExpand"/>
+                    <Label Text="Create Group " HorizontalOptions="EndAndExpand" FontSize="Small" VerticalOptions="CenterAndExpand"/>
+                    <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                        Tapped="MakeNewGroup">
+                            </TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <BoxView Color="Black" HeightRequest="1"/>
+                <ListView x:Name="InvitesList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black" ItemTapped="InvitesList_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <!--Margin format left,top,right, bottom -->
+                                    <Label Text="{Binding Username}" FontSize="Medium" Margin="10"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <!--margin goes like this  -->
+                                        <Button x:Uid="Btn_Accept" Text="Accept" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteAccept" Margin="10,10,5,10" BackgroundColor="LightSkyBlue" HorizontalOptions="FillAndExpand" Clicked="Btn_InviteAccept_Clicked" />
+                                        <Button x:Uid="Btn_Decline" Text="Decline" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteDecline" Margin="5,10,10,10" BackgroundColor="PaleVioletRed" HorizontalOptions="FillAndExpand" Clicked="Btn_InviteDecline_Clicked"/>
+                                    </StackLayout>
 
-    <StackLayout x:Name="CurrentGroupView">
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Current Group" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="End"/>
-            <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" Aspect="AspectFit" Margin="10" HeightRequest="30">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer 
-                            Tapped="MakeNewGroup">
-                    </TapGestureRecognizer>
-                </Image.GestureRecognizers>
-            </Image>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
-        <BoxView Color="Black" HeightRequest="1"/>
-        <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/>
-    </StackLayout>
-    <StackLayout x:Name="InviteGroupView">
-        <StackLayout Orientation="Horizontal"> 
-            <Label Text="Current Invites" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="EndAndExpand"/>
-            <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer 
-                                Tapped="MakeNewGroup">
-                    </TapGestureRecognizer>
-                </Image.GestureRecognizers>
-            </Image>
-        </StackLayout>
-        <BoxView Color="Black" HeightRequest="1"/>
-        <ListView x:Name="InvitesList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black" ItemTapped="InvitesList_ItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <!--Margin format left,top,right, bottom -->
-                            <Label Text="{Binding Username}" FontSize="Medium" Margin="10"/>
-                            <StackLayout Orientation="Horizontal">
-                                <!--margin goes like this  -->
-                                <Button x:Uid="Btn_Accept" Text="Accept" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteAccept" Margin="10,10,5,10" BackgroundColor="LightSkyBlue" HorizontalOptions="FillAndExpand" Clicked="Btn_InviteAccept_Clicked" />
-                                <Button x:Uid="Btn_Decline" Text="Decline" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteDecline" Margin="5,10,10,10" BackgroundColor="PaleVioletRed" HorizontalOptions="FillAndExpand" Clicked="Btn_InviteDecline_Clicked"/>
-                            </StackLayout>
-                            
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-    </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
