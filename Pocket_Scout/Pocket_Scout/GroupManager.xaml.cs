@@ -9,12 +9,27 @@ using Xamarin.Forms.Xaml;
 
 namespace Pocket_Scout
 {
+    /*
+     * TO DO: Implement deleting members from current group
+     *          Who is able to delete members? anyone or just group leader
+     *          who is able to add members? anyone or just group leader
+     *    What should the parameters for the search members functionality be?
+     *          should they only be able to input a user name or search based on contains
+     *              I can see the search based on contains being abused and people just trying to add randoms
+     *    DONE: implement adding members form the search view
+     *    Need someway to get back to group list from the search page
+     *    implement actual accepting a invite, this requires the database though so saved for next story
+     */
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GroupManager : ContentPage
     {
-        List<string> groups = new List<string>
+        List<string> usernameList = new List<string>
         {
             "John", "Jeff", "Jerry", "Jeffry","Jill","George","Johnny","Bill",
+        };
+        List<string> currentgroup = new List<string>
+        {
+            "sue","wayne", "miller", "mason","colton",
         };
         List<Invites> invitelist = new List<Invites>
             {
@@ -29,7 +44,7 @@ namespace Pocket_Scout
             InitializeComponent();
             AddMemberView.IsVisible = false;
             CurrentGroupView.IsVisible = false;
-            GroupMemberList.ItemsSource = groups;
+            GroupMemberList.ItemsSource = currentgroup;
             InvitesList.ItemsSource = invitelist;
 
         }
@@ -38,7 +53,7 @@ namespace Pocket_Scout
         {
             var keyword = MemberSearchBar.Text;
             //will return all the near searchs in list
-            var searchresults = from x in groups where x.ToLower().Contains(keyword.ToLower()) select x;
+            var searchresults = from x in usernameList where x.ToLower().Contains(keyword.ToLower()) select x;
             SearchResultList.ItemsSource = searchresults;
 
 
@@ -103,6 +118,35 @@ namespace Pocket_Scout
         {
             CurrentGroupView.IsVisible = false;
             AddMemberView.IsVisible = true;
+        }
+        //if you click on a result in the search member list
+        private async void  SearchResultList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            //string user = (string)sender;
+            //notify you to make sure you want to add them
+            var user = e.Item as string;
+
+            var DoWeNotAddUser = await DisplayAlert("Add Member", "Add member "+ user+"?", "No", "Yes");
+            if(DoWeNotAddUser)
+            {
+                //if they chose no
+                //do nothing
+            }
+            else
+            {
+                //add user to group in database
+                currentgroup.Add(user);
+                //reset data in list
+                GroupMemberList.ItemsSource = null;
+                GroupMemberList.ItemsSource = currentgroup;
+                //change views
+                AddMemberView.IsVisible = false;
+                CurrentGroupView.IsVisible = true;
+                //reset the search results
+                MemberSearchBar.Text = "";
+                SearchResultList.ItemsSource = null;
+                
+            }
         }
     }
 }

@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pocket_Scout.GroupManager"
-             Title="Group Manager">
+             Title="Group Manager"
+             >
     <ContentPage.Content>
         <!--Need to put a stacklayout over them all in order to set each visible or not-->
         <StackLayout Orientation="Vertical">
@@ -11,7 +12,7 @@
                 <SearchBar x:Name="MemberSearchBar" HeightRequest="42"
                            SearchButtonPressed="MemberSearchBar_SearchButtonPressed"/>
 
-                <ListView x:Name="SearchResultList"/>
+                <ListView x:Name="SearchResultList" ItemTapped="SearchResultList_ItemTapped"/>
             </StackLayout>
             <!--Current Group View-->
             <StackLayout x:Name="CurrentGroupView" Orientation="Vertical">
@@ -33,8 +34,8 @@
             <StackLayout x:Name="InviteGroupView">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Current Invites" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="EndAndExpand"/>
-                    <Label Text="Create Group " HorizontalOptions="EndAndExpand" FontSize="Small" VerticalOptions="CenterAndExpand"/>
-                    <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
+                    <Label Text="Create Group" HorizontalOptions="EndAndExpand" FontSize="Small" VerticalOptions="CenterAndExpand"/>
+                    <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer 
                                         Tapped="MakeNewGroup">
