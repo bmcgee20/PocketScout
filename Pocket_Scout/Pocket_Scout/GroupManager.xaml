@@ -11,11 +11,30 @@
     </StackLayout>
 
     <StackLayout x:Name="CurrentGroupView">
-        <Label Text="Current Group"/>
-        <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="None"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Current Group" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="End"/>
+            <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="End" VerticalOptions="End" Aspect="AspectFit" Margin="10" HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer 
+                            Tapped="MakeNewGroup">
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/>
     </StackLayout>
     <StackLayout x:Name="InviteGroupView">
-        <Label Text="Current Invites"/>
-        <ListView x:Name="InvitesList" HasUnevenRows="True" SeparatorVisibility="None"/> 
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Current Invites" FontSize="Large" FontAttributes="Bold" Margin="10" VerticalOptions="End"/>
+            <Image Source="PlusPicture.png" Opacity="1" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="10" HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer 
+                                Tapped="MakeNewGroup">
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <ListView x:Name="InvitesList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/> 
+        
     </StackLayout>
 </ContentPage>

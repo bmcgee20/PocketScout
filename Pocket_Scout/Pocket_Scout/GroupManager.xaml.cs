@@ -10,18 +10,20 @@ using Xamarin.Forms.Xaml;
 namespace Pocket_Scout
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GroupManager : ContentPage
-	{
+    public partial class GroupManager : ContentPage
+    {
         List<string> groups = new List<string>
         {
             "John", "Jeff", "Jerry", "Jeffry","Jill","George","Johnny","Bill",
         };
-        public GroupManager ()
-		{
-            
+        public GroupManager()
+        {
+
             InitializeComponent();
             AddMemberView.IsVisible = false;
             CurrentGroupView.IsVisible = false;
+            GroupMemberList.ItemsSource = groups;
+            InvitesList.ItemsSource = groups;
 
         }
         //TO DO: add a click on list items to invite the results that you obtain
@@ -32,6 +34,10 @@ namespace Pocket_Scout
             var searchresults = from x in groups where x.ToLower().Contains(keyword.ToLower()) select x;
 
             SearchResultList.ItemsSource = searchresults;
+        }
+        void MakeNewGroup(object sender, EventArgs args)
+        {
+
         }
     }
 }
