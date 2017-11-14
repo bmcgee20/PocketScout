@@ -62,7 +62,8 @@ namespace Pocket_Scout
             //just close any other open invite
             if (lastTappedInvite != null)
             {
-                if (lastTappedInvite.IsVisible == true)
+                //if the last one is still open and not just a double click on the same one after close
+                if (lastTappedInvite.IsVisible == true && lastTappedInvite!=invite)
                 {
                     invitelist[invitelist.IndexOf(lastTappedInvite)].IsVisible = false;
                 }

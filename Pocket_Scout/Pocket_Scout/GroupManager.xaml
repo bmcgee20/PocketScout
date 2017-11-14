@@ -41,8 +41,14 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Username}" FontSize="Medium"/>
-                            <Button Text="Accept" IsVisible="{Binding IsVisible}"/>
+                            <!--Margin format left,top,right, bottom -->
+                            <Label Text="{Binding Username}" FontSize="Medium" Margin="10"/>
+                            <StackLayout Orientation="Horizontal">
+                                <!--margin goes like this  -->
+                                <Button Text="Accept" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteAccept" Margin="10,10,5,10" BackgroundColor="LightSkyBlue" HorizontalOptions="FillAndExpand"/>
+                                <Button Text="Decline" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteDecline" Margin="5,10,10,10" BackgroundColor="PaleVioletRed" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
