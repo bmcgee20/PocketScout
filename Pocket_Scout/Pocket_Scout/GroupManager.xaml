@@ -45,8 +45,8 @@
                             <Label Text="{Binding Username}" FontSize="Medium" Margin="10"/>
                             <StackLayout Orientation="Horizontal">
                                 <!--margin goes like this  -->
-                                <Button Text="Accept" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteAccept" Margin="10,10,5,10" BackgroundColor="LightSkyBlue" HorizontalOptions="FillAndExpand"/>
-                                <Button Text="Decline" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteDecline" Margin="5,10,10,10" BackgroundColor="PaleVioletRed" HorizontalOptions="FillAndExpand"/>
+                                <Button x:Uid="Btn_Accept" Text="Accept" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteAccept" Margin="10,10,5,10" BackgroundColor="LightSkyBlue" HorizontalOptions="FillAndExpand" Clicked="Btn_InviteAccept_Clicked" />
+                                <Button x:Uid="Btn_Decline" Text="Decline" IsVisible="{Binding IsVisible}" x:Name="Btn_InviteDecline" Margin="5,10,10,10" BackgroundColor="PaleVioletRed" HorizontalOptions="FillAndExpand" Clicked="Btn_InviteDecline_Clicked"/>
                             </StackLayout>
                             
                         </StackLayout>

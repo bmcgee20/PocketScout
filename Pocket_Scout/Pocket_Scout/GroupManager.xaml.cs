@@ -72,5 +72,24 @@ namespace Pocket_Scout
             InvitesList.ItemsSource = null;
             InvitesList.ItemsSource = invitelist;
         }
+
+        private void Btn_InviteAccept_Clicked(object sender, EventArgs e)
+        {
+            //join this user to said group
+
+            //TO DO: do this once begin working on server side part
+        }
+
+        private void Btn_InviteDecline_Clicked(object sender, EventArgs e)
+        {
+            //just remove the invite from the list
+            
+            Button btn = (Button)sender;
+            Invites deleteInvite = lastTappedInvite;
+            invitelist.RemoveAt(invitelist.IndexOf(lastTappedInvite));
+            InvitesList.ItemsSource = null;
+            InvitesList.ItemsSource = invitelist;
+            lastTappedInvite = null;
+        }
     }
 }
