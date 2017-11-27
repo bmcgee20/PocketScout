@@ -15,7 +15,7 @@ namespace Pocket_Scout
         {
             InitializeComponent();
             //if (!IsUserLoggedIn){
-            MainPage = new NavigationPage(new Pocket_Scout.Login());
+            MainPage = new NavigationPage(new Pocket_Scout.Survival_Guide());//(new Pocket_Scout.Login());
             /* }
            else
             {

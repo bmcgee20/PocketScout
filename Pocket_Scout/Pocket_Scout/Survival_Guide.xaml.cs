@@ -10,13 +10,19 @@ using Xamarin.Forms.Xaml;
 namespace Pocket_Scout
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Survival_Guide : ContentPage
+	public partial class Survival_Guide : CarouselPage
 	{
 		public Survival_Guide ()
 		{
 			InitializeComponent ();
 
-		}
 
-	}
+		}
+        void AnimalButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Animal());
+        }
+
+     }
+
 }
