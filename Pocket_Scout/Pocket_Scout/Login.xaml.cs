@@ -31,9 +31,11 @@ namespace Pocket_Scout
 
             if (IsValid(Username, Password))
             {
-            //need to check if user exists and has correct pass
+                //need to check if user exists and has correct pass
+                //do this if login is valid
 
-             await Navigation.PushAsync(new Test_Main());
+                await Navigation.PushAsync(new RootPage());
+                //await Navigation.PushAsync(new Test_Main());
             }
             else
             {
