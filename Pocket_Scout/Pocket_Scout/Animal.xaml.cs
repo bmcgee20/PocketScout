@@ -18,6 +18,16 @@ namespace Pocket_Scout
             var layout = new StackLayout { Padding = new Thickness(5, 10) };
             this.Content = new ScrollView { Content = layout };
 
+            var image = new Image
+            {
+                Source = "Black_bear_BW.png",
+                WidthRequest = 150,
+                HeightRequest = 150,
+                MinimumHeightRequest = 150,
+                MinimumWidthRequest = 150,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
             var title = new Label { Text = "Animal Guide", FontSize = 45 };
             var intro = new Label
             {
@@ -41,6 +51,10 @@ namespace Pocket_Scout
 "•	Watch for any signs of tracks, droppings, or scratches on trees.This may indicate an animal is nearby and to be cautious.\n" +
 "•	Try to make noise while hiking so animals know of your presence. Some good ideas are to clap your hands, sing, or talk.\n"
 , FontSize = 20 };
+            bring.Margin = 20; intro.Margin = 20; title.Margin = 20; 
+            title.HorizontalOptions = LayoutOptions.Center;
+            bring.BackgroundColor = Color.LightGray;
+            layout.Children.Add(image);
             layout.Children.Add(title);
             layout.Children.Add(intro);
             layout.Children.Add(bring);

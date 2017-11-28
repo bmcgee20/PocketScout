@@ -20,9 +20,16 @@ namespace Pocket_Scout
 		}
         void AnimalButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Animal());
+
+            this.CurrentPage = this.Children[2];
+
+        }
+        void FAidButtonClicked(object sender, EventArgs e)
+        {
+            this.CurrentPage = this.Children[1];
         }
 
-     }
+    }
+
 
 }

@@ -116,6 +116,11 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="first_aid_icon.png" />
+    <AndroidResource Include="Resources\Drawable\first_aid_icon.png" />
+    <AndroidResource Include="Resources\Drawable\Black_bear_BW.png" />
+  </ItemGroup>
   <Import Project="..\Pocket_Scout\Pocket_Scout.projitems" Label="Shared" Condition="Exists('..\Pocket_Scout\Pocket_Scout.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
