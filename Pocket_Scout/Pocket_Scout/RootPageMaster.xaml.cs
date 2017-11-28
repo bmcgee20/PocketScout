@@ -33,11 +33,11 @@ namespace Pocket_Scout
             {
                 MenuItems = new ObservableCollection<RootPageMenuItem>(new[]
                 {
-                    new RootPageMenuItem { Id = 0, Title = "Page 1" },
-                    new RootPageMenuItem { Id = 1, Title = "Page 2" },
-                    new RootPageMenuItem { Id = 2, Title = "Page 3" },
-                    new RootPageMenuItem { Id = 3, Title = "Page 4" },
-                    new RootPageMenuItem { Id = 4, Title = "Page 5" },
+                    new RootPageMenuItem { Id = 0, Title = "Camping List" },
+                    new RootPageMenuItem { Id = 1, Title = "Utilities" },
+                    new RootPageMenuItem { Id = 2, Title = "Camping Guides" },
+                    new RootPageMenuItem { Id = 3, Title = "Communications" },
+                    new RootPageMenuItem { Id = 4, Title = "Weather" },
                 });
             }
             
