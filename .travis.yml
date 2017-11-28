@@ -1,2 +1,12 @@
+notifications:
+  email: false
 language: csharp
 solution: Pocket_Scout.sln
+dotnet: 1.0.3
+dist: trusty
+mono:
+    - latest
+    - 3.12.0
+    - 3.10.0
+script:
+    - dotnet restore
