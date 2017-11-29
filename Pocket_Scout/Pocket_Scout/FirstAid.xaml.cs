@@ -42,9 +42,9 @@ namespace Pocket_Scout
                 " You never know when an injury may occur, so it is best to be familiar with basic first aid. " +
                 "Here you can learn general tips and ideas for creating your own first aid kit."
                 ,
-                FontSize = 15
+                FontSize = 18
             };
-            intro.Margin = 10; title.HorizontalOptions = LayoutOptions.Center; intro.BackgroundColor = Color.LightGray;
+            intro.Margin = 20; title.HorizontalOptions = LayoutOptions.Center; intro.BackgroundColor = Color.LightGray;
 
 
             var lblBase = new Label
@@ -54,7 +54,7 @@ namespace Pocket_Scout
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 VerticalOptions = LayoutOptions.Center
 
-            }; lblBase.FontSize = 20;
+            }; lblBase.FontSize = 20; 
 
             var lblBase2 = new Label
             {
@@ -112,36 +112,95 @@ namespace Pocket_Scout
                 Children = { btnShowHide1, lblBase },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            };GeneralTipsLayout.Margin = 10;
 
             var KitTipsLayout = new StackLayout
             {
                 Children = { btnShowHide2, lblBase2 },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            };KitTipsLayout.Margin = 10;
 
-            var GeneralTipsPanel = new Label//inside panel
+            var GeneralTitle = new Label//inside panel
             {
-                Text = "How to treat minor cuts and scrapes:\n   Firstly, you want to keep the cut/scrape clean to avoid infection. Make sure to wash your hands and stop any bleeding." +
-                " After the bleeding has stopped, clean the wound and make sure to remove any dirt or debris in the process. \n\n Make sure to see a doctor if: \n"+
-                "•	You cannot stop bleeding from the wound.\n"+
-                "•	Pus drains from the cut.\n"+
-                "•	You have a high fever.\n"+
-                "•	The wound is severe enough that you think you may need stitches.\n" +
-                "•	The cut or scrape is from a dirty or rusty object.This may need to be treated with a tetanus shot.\n" +
-                "\nTreating bug bites:\n  Make sure to remove the stinger if the insect has left one in the infected area. Wash the area with soap and water. Ice may help to reduce swelling and pain from the infected area."+
-                "\n You may also apply Benadryl and antihistamine creams to the infected area to stop or prevent itching. If there is pain, ibuprofen or acetaminophen can be used to reduce pain. Remember, if the allergic reaction occurs and is serious seek medical attention immediately!" +
-                "\n\n Treating mild sprains or strains:\n •	Rest the injured limb. \n" +
-                "•	Keep injured body part raised by putting pillow underneath.\n" +
-                "•	Wrap in a bandage or splint.\n" +
-                "•	Hold ice on limb to reduce any swelling.\n"
-,
-                //TextColor = Color.DarkGray,
+                Text = "How to treat minor cuts and scrapes:",
+                Margin = 20,
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 VerticalOptions = LayoutOptions.Center
             };
-
+            var GeneralTitle2 = new Label//inside panel
+            {
+                Text = "Make sure to see a doctor if:",
+                Margin = 20,
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            var GeneralTitle3 = new Label//inside panel
+            {
+                Text = "Treating bug bites:",
+                Margin = 20,
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            var GeneralTitle4 = new Label//inside panel
+            {
+                Text = "Treating mild sprains or strains:",
+                Margin = 20,
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            var GeneralTipsPanel = new Label//inside panel
+            {
+                Text = "   Firstly, you want to keep the cut/scrape clean to avoid infection. Make sure to wash your hands and stop any bleeding." +
+                " After the bleeding has stopped, clean the wound and make sure to remove any dirt or debris in the process. "
+                , Margin = 20, FontSize = 18,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            var GeneralTipsPanel2 = new Label//inside panel
+            {
+                Text = 
+                "•	You cannot stop bleeding from the wound.\n" +
+                "•	Pus drains from the cut.\n" +
+                "•	You have a high fever.\n" +
+                "•	The wound is severe enough that you think you may need stitches.\n" +
+                "•	The cut or scrape is from a dirty or rusty object.This may need to be treated with a tetanus shot."
+                ,
+                Margin = 20,
+                FontSize = 18,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            var GeneralTipsPanel3 = new Label//inside panel
+            {
+                Text =
+    "Make sure to remove the stinger if the insect has left one in the infected area. Wash the area with soap and water. Ice may help to reduce swelling and pain from the infected area." +
+                "\n You may also apply Benadryl and antihistamine creams to the infected area to stop or prevent itching. If there is pain, ibuprofen or acetaminophen can be used to reduce pain." +
+                " Remember, if the allergic reaction occurs and is serious seek medical attention immediately!" ,
+                Margin = 20,
+                FontSize = 18,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            var GeneralTipsPanel4 = new Label//inside panel
+            {
+                Text =
+                "•	Keep injured body part raised by putting pillow underneath." +
+                "•	Wrap in a bandage or splint.\n" +
+                "•	Hold ice on limb to reduce any swelling.\n",
+                Margin = 20,
+                FontSize = 18,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
             var KitTipsPanel = new Label//inside panel
             {
                 Text = "Below is a basic list of items that may be used as a basis for creating your own kit." +
@@ -159,15 +218,16 @@ namespace Pocket_Scout
             "•	Antihistamine(for allergic reactions)\n" +
             "•	Ibuprofen or other pain relief medications\n" +
             "•	Safety pins\n" +
-            "•	Hand sanitizer\n",
-                //TextColor = Color.DarkGray,
+            "•	Hand sanitizer"
+                ,Margin = 20,
+                FontSize = 18,
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 VerticalOptions = LayoutOptions.Center
             };
 
             InsideGeneralTipsLayout = new StackLayout
             {
-                Children = { GeneralTipsPanel },
+                Children = { GeneralTitle,GeneralTipsPanel,GeneralTitle2,GeneralTipsPanel2,GeneralTitle3,GeneralTipsPanel3,GeneralTitle4,GeneralTipsPanel4 },
                 BackgroundColor = Color.LightGray,
                 IsVisible = false
             };

@@ -38,9 +38,9 @@ namespace Pocket_Scout
 
             var intro = new Label
             {
-                Text = " Wonder what you will be cooking on your future camping trip? This guide will give you ideas on what and what not to bring. "
+                Text = " Wonder what you will be cooking on your future camping trip? This guide will give you ideas on what to and what not to bring. "
                 ,
-                FontSize = 15
+                FontSize = 18
             };
             intro.Margin = 10; title.HorizontalOptions = LayoutOptions.Center; intro.BackgroundColor = Color.LightGray;
 

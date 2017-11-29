@@ -37,19 +37,20 @@ namespace Pocket_Scout
                 Source = "beaver_track.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
             var beaverl = new Label{
                 Text = "Beaver ",
                 FontSize = 30,
-                HorizontalOptions = LayoutOptions.End
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
             };
             var bbear = new Image
             {
                 Source = "black_bear_track.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var bobcat = new Image
@@ -57,7 +58,7 @@ namespace Pocket_Scout
                 Source = "bobcat.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var coyote = new Image
@@ -65,7 +66,7 @@ namespace Pocket_Scout
                 Source = "coyote.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var deer = new Image
@@ -73,7 +74,7 @@ namespace Pocket_Scout
                 Source = "deer.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var op = new Image
@@ -81,7 +82,7 @@ namespace Pocket_Scout
                 Source = "op.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var rabbit = new Image
@@ -89,7 +90,7 @@ namespace Pocket_Scout
                 Source = "rabbit.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var racoon = new Image
@@ -97,28 +98,28 @@ namespace Pocket_Scout
                 Source = "racoon.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
             var skunk = new Image
             {
                 Source = "skunk.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
             var sq = new Image
             {
                 Source = "sq.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
             var wolf = new Image
             {
                 Source = "wolf.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var title = new Label { Text = "Animal Guide", FontSize = 45 };
@@ -128,7 +129,7 @@ namespace Pocket_Scout
                 Text = "  You will encounter various wildlife throughout your camping endeavors.  " +
                 "To help you stay safe, check out the below tips on how to avoid/interact with wildlife. "
                 ,
-                FontSize = 15
+                FontSize = 18
             };
             intro.Margin = 10; title.HorizontalOptions = LayoutOptions.Center; intro.BackgroundColor = Color.LightGray;
             
@@ -246,13 +247,15 @@ namespace Pocket_Scout
             var GeneralTipsPanel = new Label//inside panel
             {
                 Text = "•	Animals may infest your campsite while looking for food. To avoid this, keep any food inside containers like coolers with a lock on its lid.\n" +
-                        " You can tie a rope around the container and hang it 7 feet above the ground. The goal here is to get the food away from the reach of an animal such as a bear.\n\n" +
-                        "It is also a good idea to hang your food a good distance from your campsite in case any animals are attracted to it." +
+                        " You can tie a rope around the container and hang it 7 feet above the ground. The goal here is to get the food away from the reach of an animal such as a bear.\n" +
+                        "It is also a good idea to hang your food a good distance from your campsite in case any animals are attracted to it.\n" +
                         "\n•	Take care of any leftovers after a meal and make sure none is left exposed. Throw away trash in odor proof bags to avoid the smell of food.\n\n" +
                         "•	Wash dishes and utensils after use to get off any food particles.\n\n" +
                         "•	Avoid lotions or anything with a noticeable scent. Various scents can attract animals looking for food.\n\n" +
                         "•	Depending on your location, it may be a good idea to ask any park rangers for tips on the local animals and how to navigate around them safely.",
-                //TextColor = Color.DarkGray,
+                
+                FontSize = 18,
+                Margin = 20,
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 VerticalOptions = LayoutOptions.Center
             };
@@ -263,7 +266,9 @@ namespace Pocket_Scout
                         "•	Avoid hiking at night or off the trail. It is also a good idea to hike with a partner.\n\n" +
                         "•	Watch for any signs of tracks, droppings, or scratches on trees.This may indicate an animal is nearby and to be cautious.\n\n" +
                         "•	Try to make noise while hiking so animals know of your presence. Some good ideas are to clap your hands, sing, or talk.\n",
-                //TextColor = Color.DarkGray,
+               
+                FontSize = 18,
+                Margin = 20,
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 VerticalOptions = LayoutOptions.Center
             };
@@ -271,7 +276,9 @@ namespace Pocket_Scout
             var TracksPanel = new Label//inside panel
             {
                 Text = " Curious about what tracks you saw? \n Below are general animal tracks you may encounter in North America.",
-                //TextColor = Color.DarkGray,
+                
+                FontSize = 18,
+                Margin = 20,
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 VerticalOptions = LayoutOptions.Center
             };

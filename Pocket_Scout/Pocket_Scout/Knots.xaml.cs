@@ -41,7 +41,7 @@ namespace Pocket_Scout
                 Text = "  Knowing how to tie knots is a valuable skill in wilderness survival. " +
                 "Below is a list of common knots that may be useful to your camping trip. "
                 ,
-                FontSize = 15
+                FontSize = 18
             };
 
             intro.Margin = 10;
