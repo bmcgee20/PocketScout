@@ -38,8 +38,9 @@ namespace Pocket_Scout
                     new RootPageMenuItem { Id = 1, Title = "Camping List", TargetType = typeof(CampingListPage) },
                     new RootPageMenuItem { Id = 2, Title = "Utilities", TargetType = typeof(MainPage) },
                     new RootPageMenuItem { Id = 3, Title = "Camping Guides", TargetType = typeof(Survival_Guide) },
-                    new RootPageMenuItem { Id = 4, Title = "Chat Room", TargetType = typeof(ChatPage) },
-                    new RootPageMenuItem { Id = 5, Title = "Weather", TargetType = typeof(MainPage) },
+                    new RootPageMenuItem { Id = 4, Title = "Group Manager", TargetType = typeof(GroupManager) },
+                    new RootPageMenuItem { Id = 5, Title = "Chat Room", TargetType = typeof(ChatPage) },
+                    new RootPageMenuItem { Id = 6, Title = "Weather", TargetType = typeof(MainPage) },
                 });
             }
             
