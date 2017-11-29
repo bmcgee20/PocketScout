@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pocket_Scout.ChatGroupPage"
              Title="Group Members">
-    
+
     <ListView x:Name="MessageLister" HasUnevenRows="True" BackgroundColor="White">
         <ListView.ItemTemplate>
             <!--Defines what items in listview look like-->
@@ -16,11 +16,8 @@
                         <Label Text="{Binding Name}" FontSize="Medium" TextColor="Black"/>
                         <Label Text="{Binding LastOnline}" HorizontalOptions="End" FontSize="Medium" TextColor="Black"/>
                     </StackLayout>
-
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-        </ListView>
-    
-
+    </ListView>
 </ContentPage>

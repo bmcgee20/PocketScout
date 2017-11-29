@@ -7,6 +7,8 @@
         <StackLayout Padding="20">
             <Button Text="Chat page" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="ChatPageButton" x:Name="ChatPagesButton"/>
             <Button Text="Camping List" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="CampingListButton" x:Name="CampingListsButton"/>
+            <Button Text="Group Manager" Clicked="ButtonClicked" VerticalOptions="Start" HorizontalOptions="Fill" x:Uid="GroupManagerButton" x:Name="GroupManagersButton"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
