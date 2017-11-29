@@ -28,7 +28,21 @@
                     </Image>
                 </StackLayout>
                 <BoxView Color="Black" HeightRequest="1"/>
-                <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black"/>
+                <ListView x:Name="GroupMemberList" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="OnRemoveUser" Text="Remove User" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+                                <StackLayout Orientation="Vertical">
+                                    <!--Margin format left,top,right, bottom -->
+                                    <Label Text="{Binding Name}" FontSize="Medium" Margin="10"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
             <!--Invite view-->
             <StackLayout x:Name="InviteGroupView">

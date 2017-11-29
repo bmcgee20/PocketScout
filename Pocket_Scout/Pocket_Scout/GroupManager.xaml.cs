@@ -11,14 +11,11 @@ namespace Pocket_Scout
 {
     /*
      * TO DO: Implement deleting members from current group
-     *          Who is able to delete members? anyone or just group leader
-     *          who is able to add members? anyone or just group leader
-     *    What should the parameters for the search members functionality be?
-     *          should they only be able to input a user name or search based on contains
-     *              I can see the search based on contains being abused and people just trying to add randoms
-     *    DONE: implement adding members form the search view
-     *    Need someway to get back to group list from the search page
-     *    implement actual accepting a invite, this requires the database though so saved for next story
+     *    
+     *    Later questions:
+     *          Who should be able to delete members? anyone or just group leader
+     *          Who should be able to add members? anyone or just group leader
+     *          What should the parameters for the search members functionality be? (security reasons)
      */
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GroupManager : ContentPage
@@ -27,13 +24,17 @@ namespace Pocket_Scout
         {
             "John", "Jeff", "Jerry", "Jeffry","Jill","George","Johnny","Bill",
         };
-        List<string> currentgroup = new List<string>
+        List<GroupMember> currentgroup = new List<GroupMember>
         {
-            "sue","wayne", "miller", "mason","colton",
+                new GroupMember{Name = "Bill", LastOnline = "11/29/17"},
+                new GroupMember{Name = "Wayne", LastOnline = "11/29/17"},
+                new GroupMember{Name = "Miller", LastOnline = "11/29/17"},
+                new GroupMember{Name = "George", LastOnline = "11/29/17"},
+                new GroupMember{Name = "Colton", LastOnline = "11/29/17"},
         };
         List<Invites> invitelist = new List<Invites>
             {
-                new Invites{Username = "Bob Dole", IsVisible = false},
+                new Invites{Username = "Bob", IsVisible = false},
                 new Invites{Username = "Sam", IsVisible = false},
                 new Invites{Username = "Bill", IsVisible = false},
             };
@@ -97,7 +98,8 @@ namespace Pocket_Scout
         private void Btn_InviteAccept_Clicked(object sender, EventArgs e)
         {
             //join this user to said group
-
+            InviteGroupView.IsVisible = false;
+            CurrentGroupView.IsVisible = true;
             //TO DO: do this once begin working on server side part
         }
         //if you press the decline button under invite listview
@@ -119,6 +121,16 @@ namespace Pocket_Scout
             CurrentGroupView.IsVisible = false;
             AddMemberView.IsVisible = true;
         }
+        public void OnRemoveUser(object sender, EventArgs e)
+        {
+            var menuItemRemove = ((MenuItem)sender);
+            var user = menuItemRemove.CommandParameter as GroupMember;
+            DisplayAlert("Group Changed:", user.Name+" was removed", "Proceed");
+            //TO DO: implmenent functionality of deleting user
+            currentgroup.Remove(user);
+            GroupMemberList.ItemsSource = null;
+            GroupMemberList.ItemsSource = currentgroup;
+        }
         //if you click on a result in the search member list
         private async void  SearchResultList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -135,7 +147,8 @@ namespace Pocket_Scout
             else
             {
                 //add user to group in database
-                currentgroup.Add(user);
+                GroupMember currentUser = new GroupMember { Name = user, LastOnline = "11/29/17" };
+                currentgroup.Add(currentUser);
                 //reset data in list
                 GroupMemberList.ItemsSource = null;
                 GroupMemberList.ItemsSource = currentgroup;
@@ -149,4 +162,5 @@ namespace Pocket_Scout
             }
         }
     }
+
 }
