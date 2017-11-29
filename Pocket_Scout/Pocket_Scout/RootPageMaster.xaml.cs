@@ -33,11 +33,11 @@ namespace Pocket_Scout
             {
                 MenuItems = new ObservableCollection<RootPageMenuItem>(new[]
                 {
-                    new RootPageMenuItem { Id = 0, Title = "Camping List" },
-                    new RootPageMenuItem { Id = 1, Title = "Utilities" },
-                    new RootPageMenuItem { Id = 2, Title = "Camping Guides" },
-                    new RootPageMenuItem { Id = 3, Title = "Communications" },
-                    new RootPageMenuItem { Id = 4, Title = "Weather" },
+                    new RootPageMenuItem { Id = 0, Title = "Camping List", TargetType = typeof(CampingListPage) },
+                    new RootPageMenuItem { Id = 1, Title = "Utilities", TargetType = typeof(Test_Main) },
+                    new RootPageMenuItem { Id = 2, Title = "Camping Guides", TargetType = typeof(Survival_Guide) },
+                    new RootPageMenuItem { Id = 3, Title = "Chat Room", TargetType = typeof(ChatPage) },
+                    new RootPageMenuItem { Id = 4, Title = "Weather", TargetType = typeof(Test_Main) },
                 });
             }
             
