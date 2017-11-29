@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Pocket_Scout"
              x:Class="Pocket_Scout.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+	<Label Text="Welcome to Xamarin Forms!!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 

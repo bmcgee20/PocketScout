@@ -9,18 +9,37 @@
     <Import_RootNamespace>Pocket_Scout</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Animal.xaml.cs">
+      <DependentUpon>Animal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Cooking.xaml.cs">
+      <DependentUpon>Cooking.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FirstAid.xaml.cs">
+      <DependentUpon>FirstAid.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ForgotPassword.xaml.cs">
       <DependentUpon>ForgotPassword.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)GroupManager.xaml.cs">
       <DependentUpon>GroupManager.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Invites.cs" />
+=======
+    <Compile Include="$(MSBuildThisFileDirectory)Knots.xaml.cs">
+      <DependentUpon>Knots.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+>>>>>>> SurvivalGuide
     <Compile Include="$(MSBuildThisFileDirectory)Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -48,6 +67,7 @@
       <DependentUpon>Survival_Guide.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)CampingItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CampingListPage.xaml.cs">
       <DependentUpon>CampingListPage.xaml</DependentUpon>
@@ -68,6 +88,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Message.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Test_Main.xaml.cs">
       <DependentUpon>Test_Main.xaml</DependentUpon>
+=======
+    <Compile Include="$(MSBuildThisFileDirectory)test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+>>>>>>> SurvivalGuide
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -124,31 +148,51 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)CampingListPage.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)FirstAid.xaml">
+>>>>>>> SurvivalGuide
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)RootPage.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Animal.xaml">
+>>>>>>> SurvivalGuide
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)RootPageMaster.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Cooking.xaml">
+>>>>>>> SurvivalGuide
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)RootPageDetail.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Knots.xaml">
+>>>>>>> SurvivalGuide
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)GroupManager.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)test.xaml">
+>>>>>>> SurvivalGuide
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

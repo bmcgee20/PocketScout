@@ -133,6 +133,7 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <AndroidResource Include="Resources\Drawable\ChatPageButtonImage.png" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\DeleteIcon.png" />
+=======
+    <Content Include="first_aid_icon.png" />
+    <AndroidResource Include="Resources\Drawable\first_aid_icon.png" />
+    <AndroidResource Include="Resources\Drawable\Black_bear_BW.png" />
+    <AndroidResource Include="Resources\Drawable\fire_pic.png" />
+    <AndroidResource Include="Resources\Drawable\knot.png" />
+    <AndroidResource Include="Resources\Drawable\beaver_track.png" />
+    <AndroidResource Include="Resources\Drawable\black_bear_track.png" />
+    <AndroidResource Include="Resources\Drawable\bobcat.png" />
+    <AndroidResource Include="Resources\Drawable\coyote.png" />
+    <AndroidResource Include="Resources\Drawable\deer.png" />
+    <AndroidResource Include="Resources\Drawable\op.png" />
+    <AndroidResource Include="Resources\Drawable\rabbit.png" />
+    <AndroidResource Include="Resources\Drawable\racoon.png" />
+    <AndroidResource Include="Resources\Drawable\skunk.png" />
+    <AndroidResource Include="Resources\Drawable\sq.png" />
+    <AndroidResource Include="Resources\Drawable\wolf.png" />
+>>>>>>> SurvivalGuide
   </ItemGroup>
   <Import Project="..\Pocket_Scout\Pocket_Scout.projitems" Label="Shared" Condition="Exists('..\Pocket_Scout\Pocket_Scout.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

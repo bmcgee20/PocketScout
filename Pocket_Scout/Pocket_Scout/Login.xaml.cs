@@ -9,11 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Pocket_Scout
 {
-    //private static Uri Base_URL = new Uri("localhost:3000/api/")
+    
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+
         public Login()
         {
             InitializeComponent();
