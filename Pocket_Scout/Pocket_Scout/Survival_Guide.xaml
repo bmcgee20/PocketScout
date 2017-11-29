@@ -7,7 +7,7 @@
     <ContentPage>
         <ContentPage.Content>
          <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,40,0,30">
-            <Label Text="Survival Guide" FontSize="50" Margin="10"/>
+            <Label Text="Survival Guide" FontSize="50" Margin="10" HorizontalOptions="Center"/>
                 <Label Text="What would you like to learn about?" FontSize="20" HorizontalOptions="Center" Margin="10"/>
                 <Grid VerticalOptions="FillAndExpand" ColumnSpacing="20" RowSpacing="20" Margin="45" >
                     <Grid.RowDefinitions>
@@ -21,14 +21,16 @@
 
                     <Button Text="First Aid" Grid.Row="0" Grid.Column="0" FontSize="20" Clicked="FAidButtonClicked"></Button>
                     <Button Text="Animal Guide" Grid.Row="0" Grid.Column="1" FontSize="20" Clicked="AnimalButtonClicked"></Button>
-                    <Button Text="Cooking Tips" Grid.Row="1" Grid.Column="0" FontSize="20"></Button>
-                    <Button Text="Knots" Grid.Row="1" Grid.Column="1" FontSize="20"></Button>
+                    <Button Text="Cooking Tips" Grid.Row="1" Grid.Column="0" FontSize="20" Clicked="CookButtonClicked"></Button>
+                    <Button Text="Knots" Grid.Row="1" Grid.Column="1" FontSize="20" Clicked="KnotButtonClicked"></Button>
                 </Grid>
             </StackLayout>   
         </ContentPage.Content></ContentPage>
 
     <local:FirstAid></local:FirstAid>
     <local:Animal></local:Animal>
+    <local:Cooking></local:Cooking>
+    <local:Knots></local:Knots>
     
 
 </CarouselPage>

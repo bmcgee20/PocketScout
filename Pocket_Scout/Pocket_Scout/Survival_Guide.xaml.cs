@@ -16,7 +16,6 @@ namespace Pocket_Scout
 		{
 			InitializeComponent ();
 
-
 		}
         void AnimalButtonClicked(object sender, EventArgs e)
         {
@@ -28,7 +27,14 @@ namespace Pocket_Scout
         {
             this.CurrentPage = this.Children[1];
         }
-
+        void CookButtonClicked(object sender, EventArgs e)
+        {
+            this.CurrentPage = this.Children[3];
+        }
+        void KnotButtonClicked(object sender, EventArgs e)
+        {
+            this.CurrentPage = this.Children[4];
+        }
     }
 
 
