@@ -113,14 +113,14 @@ namespace Pocket_Scout
                 Children = { btnShowHide1, lblBase },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            }; GeneralTipsLayout.Margin = 10;
 
             var KnotTipsLayout = new StackLayout
             {
                 Children = { btnShowHide2, lblBase2 },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            }; KnotTipsLayout.Margin = 10;
 
             var GeneralTipsPanel = new Label//inside panel
             {

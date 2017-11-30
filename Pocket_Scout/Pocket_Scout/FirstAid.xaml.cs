@@ -42,9 +42,11 @@ namespace Pocket_Scout
                 " You never know when an injury may occur, so it is best to be familiar with basic first aid. " +
                 "Here you can learn general tips and ideas for creating your own first aid kit."
                 ,
+                HorizontalOptions = LayoutOptions.Center,Margin=20,
                 FontSize = 18
             };
-            intro.Margin = 20; title.HorizontalOptions = LayoutOptions.Center; intro.BackgroundColor = Color.LightGray;
+            //intro.Margin = 20;
+            title.HorizontalOptions = LayoutOptions.Center; intro.BackgroundColor = Color.LightGray;
 
 
             var lblBase = new Label
@@ -111,7 +113,7 @@ namespace Pocket_Scout
             {
                 Children = { btnShowHide1, lblBase },
                 BackgroundColor = Color.Gray,
-                Orientation = StackOrientation.Horizontal
+            Orientation = StackOrientation.Horizontal
             };GeneralTipsLayout.Margin = 10;
 
             var KitTipsLayout = new StackLayout
@@ -193,7 +195,7 @@ namespace Pocket_Scout
             var GeneralTipsPanel4 = new Label//inside panel
             {
                 Text =
-                "•	Keep injured body part raised by putting pillow underneath." +
+                "•	Keep injured body part raised by putting pillow underneath.\n" +
                 "•	Wrap in a bandage or splint.\n" +
                 "•	Hold ice on limb to reduce any swelling.\n",
                 Margin = 20,
@@ -247,7 +249,7 @@ namespace Pocket_Scout
 
             var pgrBase = new PanGestureRecognizer();
             pgrBase.PanUpdated += OnPanUpdated;
-            pgrBase.PanUpdated += OnPanUpdated2;//???????????
+            pgrBase.PanUpdated += OnPanUpdated2;
 
             var pgrDetails = new PanGestureRecognizer();
             pgrDetails.PanUpdated += OnPanUpdated;

@@ -52,6 +52,13 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
+            var bbearl = new Label
+            {
+                Text = "Black Bear ",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
 
             var bobcat = new Image
             {
@@ -60,7 +67,13 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
-
+            var bobcatl = new Label
+            {
+                Text = "Bobcat ",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
             var coyote = new Image
             {
                 Source = "coyote.png",
@@ -68,12 +81,25 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
-
+            var coyotel = new Label
+            {
+                Text = "Coyote ",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
             var deer = new Image
             {
                 Source = "deer.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
+                HorizontalOptions = LayoutOptions.Center
+            };
+            var deerl = new Label
+            {
+                Text = "Whitetail Deer ",
+                FontSize = 30,
+                Margin = 10,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -84,7 +110,13 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
-
+            var opl = new Label
+            {
+                Text = "Opossum ",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
             var rabbit = new Image
             {
                 Source = "rabbit.png",
@@ -92,12 +124,28 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
+            var rabbitl = new Label
+            {
+                Text = "Cottontail Rabbit",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
 
             var racoon = new Image
             {
                 Source = "racoon.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
+            var racl = new Label
+            {
+                Text = "Raccoon ",
+                FontSize = 30,
+                Margin = 10,
                 HorizontalOptions = LayoutOptions.Center
             };
             var skunk = new Image
@@ -107,6 +155,14 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
+
+            var skunkl = new Label
+            {
+                Text = "Skunk ",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
             var sq = new Image
             {
                 Source = "sq.png",
@@ -114,11 +170,25 @@ namespace Pocket_Scout
                 HeightRequest = 150,
                 HorizontalOptions = LayoutOptions.Center
             };
+            var sql = new Label
+            {
+                Text = "Gray Squirrel ",
+                FontSize = 30,
+                Margin = 10,
+                HorizontalOptions = LayoutOptions.Center
+            };
             var wolf = new Image
             {
                 Source = "wolf.png",
                 WidthRequest = 150,
                 HeightRequest = 150,
+                HorizontalOptions = LayoutOptions.Center
+            };
+            var wolfl = new Label
+            {
+                Text = "Wolf ",
+                FontSize = 30,
+                Margin = 10,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -228,25 +298,25 @@ namespace Pocket_Scout
                 Children = { btnShowHide1, lblBase },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            }; GeneralTipsLayout.Margin = 10;
 
             var HikingTipsLayout = new StackLayout
             {
                 Children = { btnShowHide2, lblBase2 },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            }; HikingTipsLayout.Margin = 10;
 
             var TracksLayout = new StackLayout
             {
                 Children = { btnShowHide3, lblBase3 },
                 BackgroundColor = Color.Gray,
                 Orientation = StackOrientation.Horizontal
-            };
+            }; TracksLayout.Margin = 10;
 
             var GeneralTipsPanel = new Label//inside panel
             {
-                Text = "•	Animals may infest your campsite while looking for food. To avoid this, keep any food inside containers like coolers with a lock on its lid.\n" +
+                Text = "•	Animals may infest your campsite while looking for food. To avoid this, keep any food inside containers like a cooler with a lock on the lid.\n" +
                         " You can tie a rope around the container and hang it 7 feet above the ground. The goal here is to get the food away from the reach of an animal such as a bear.\n" +
                         "It is also a good idea to hang your food a good distance from your campsite in case any animals are attracted to it.\n" +
                         "\n•	Take care of any leftovers after a meal and make sure none is left exposed. Throw away trash in odor proof bags to avoid the smell of food.\n\n" +
@@ -299,7 +369,8 @@ namespace Pocket_Scout
 
             InsideTracksLayout = new StackLayout
             {
-                Children = { TracksPanel,beaverl,beaver,bbear,bobcat,coyote,deer,op,rabbit,racoon,skunk,sq,wolf },// Add images here?
+                Children = { TracksPanel,beaverl,beaver,bbearl,bbear,bobcatl,bobcat,
+                    coyotel,coyote,deerl,deer,opl,op,rabbitl,rabbit,racl,racoon,skunkl,skunk,sql,sq,wolfl,wolf },// Add images here
                 BackgroundColor = Color.LightGray,
                 IsVisible = false
             };
